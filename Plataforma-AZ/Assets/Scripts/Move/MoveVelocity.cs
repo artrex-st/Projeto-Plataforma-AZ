@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class MoveVelocity : MonoBehaviour, IMove
 {
-    [SerializeField] 
-    private float moveSpeed = 10;
     private Vector2 velocityVector;
     private Rigidbody2D rigidbody2D;
     //private Character_Base characterBase;
@@ -27,7 +25,7 @@ public class MoveVelocity : MonoBehaviour, IMove
 
     private void FixedUpdate()
     {
-        rigidbody2D.velocity = new Vector2(velocityVector.x * moveSpeed, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed, rigidbody2D.velocity.y);
         //characterBase.PlayMoveAinm(velocityVector);
     }
 }

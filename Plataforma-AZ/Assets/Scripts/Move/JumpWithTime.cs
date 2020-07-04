@@ -8,7 +8,6 @@ public class JumpWithTime : MonoBehaviour
     [SerializeField]
     public bool isGrounded;
     private Rigidbody2D rbJump;
-    public float jumpForce = 10;
     public Transform footPosition;
     public LayerMask layerOfGround;
 
@@ -21,7 +20,7 @@ public class JumpWithTime : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
         {
-            rbJump.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rbJump.AddForce(Vector2.up * GetComponent<PlayerController>().jumpForce, ForceMode2D.Impulse);
 
         }
     }
