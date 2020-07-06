@@ -590,8 +590,9 @@ GameObject:
   - component: {fileID: 1376817791}
   - component: {fileID: 1376817788}
   - component: {fileID: 1376817787}
+  - component: {fileID: 1376817793}
   m_Layer: 0
-  m_Name: Gamer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -746,11 +747,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d2ae3de6745d24d8221b553c2da792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
-  footPosition: {fileID: 1374984600}
-  layerOfGround:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &1376817792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,26 +762,33 @@ MonoBehaviour:
   maxHP: 100
   currHP: 0
   speed: 5.3
-  moveTo: 0
-  jumpForce: 20
-  gravity: 2
-  maxFuel: 50
-  fuel: 50
-  fuelCost: 0
-  flyForce: 40
-  attack: 0
-  defence: 0
-  resist: 0
-  breath: 0
-  WeaponCooldown: 0
-  canMove: 0
-  isMoving: 0
-  isGround: 0
-  isCrouch: 0
-  isFalling: 0
-  isWall: 0
-  fly: 0
-  keys: 0
+  moveInX: 0
+  jumpForce: 11.7
+  gravityScale: 9.2
+  footPosition: {fileID: 1374984600}
+  layerOfGround:
+    serializedVersion: 2
+    m_Bits: 256
+  rbPlayer: {fileID: 0}
+--- !u!95 &1376817793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376817784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49824f87f3bd73244bc23928a8c1b579, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1379530763
 GameObject:
   m_ObjectHideFlags: 0

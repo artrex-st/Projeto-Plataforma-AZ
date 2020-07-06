@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace ArtrexUtils
@@ -8,29 +9,33 @@ namespace ArtrexUtils
     public static class Check
     {
         /// <summary>
-        /// Classe para vericar toque de Layers, precisa do Ponto de toque e qual layer ele deve verificar. (transform do pé + Layer do chão)
+        /// Classe para vericar "toque" de Layers. (Class created to check "touches".)
         /// </summary>
-        /// <param name="footPosition">Posição para o verificar o toque</param>
-        /// <param name="layerOfGround">Qual deve ser a layer verificada</param>
+        /// <param name="footPosition">Local para o verificar o "toque" (position of "touch" check)</param>
+        /// <param name="layerOfGround">layer para checar (layor to check)</param>
         /// <returns></returns>
         public static Boolean FGrounded(Transform footPosition, LayerMask layerOfGround)
         {
             return Physics2D.OverlapCircle(footPosition.transform.position, 0.2f, layerOfGround);
         }
+
+
+
         /// <summary>
-        /// Classe criada para Verificar se o numero é Maior ou igual a 0 ou se é menor ou igual a Zero,
+        /// Classe criada para Verificar se o player está indo para direita ou esquerda e Virar a sprite da maneira correta. (Class created to check the player's direction, if player runs right, left or stop, he rotates the correct sprite)
         /// </summary>
-        /// <param name="velocity">Valor para comparação</param>
+        /// <param name="velocity">Valor para checar (value to check)</param>
+        /// <param name="side">Valor para quando estiver parado (value for when stopped)</param>
         /// <returns></returns>
-        public static bool Flip2D(float velocity)
+        public static quaternion Flip2D(float velocity, Quaternion side)
         {
-            if (velocity <= 0)
-                return true;//SpritePlayer.flipX = true;
+            if (velocity > 0)
+                return new Quaternion(0, 0, 0, 0); //correndo para direita;
             else
-            if (velocity >= 0)
-                return false; //SpritePlayer.flipX = false;
+            if (velocity < 0)
+                return new Quaternion(0, 180, 0, 0); //correndo para a esquerda;
             else
-                return false;
+                return side; // está parado
         }
     }
 }
