@@ -24,8 +24,11 @@ public class Jump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
         {
             jumpRequest = true;
-            GetComponent<Animator>().SetBool("Jump", jumpRequest);
+            GetComponent<Animator>().SetTrigger("Jump");
         }
+
+        GetComponent<Animator>().SetFloat("JumpForce", GetComponent<Rigidbody2D>().velocity.y);
+        GetComponent<Animator>().SetBool("IsGround", Check.FGrounded(footPosition, layerOfGround));
     }
 
     void FixedUpdate()

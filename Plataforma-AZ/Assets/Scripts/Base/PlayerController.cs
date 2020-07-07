@@ -37,5 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         rbPlayer.gravityScale = gravityScale;
         moveInX = GetComponent<Rigidbody2D>().velocity.x;
+
     }
 }
