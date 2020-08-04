@@ -28,7 +28,7 @@ public class MoveVelocity : MonoBehaviour, IMove
     private void FixedUpdate()
     {
         rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
-        GetComponent<Animator>().SetFloat("Run", math.abs(velocityVector.x));
+        GetComponentInChildren<Animator>().SetFloat("Run", math.abs(velocityVector.x));
 
         transform.rotation = Check.Flip2D(velocityVector.x,transform.rotation);
     }
