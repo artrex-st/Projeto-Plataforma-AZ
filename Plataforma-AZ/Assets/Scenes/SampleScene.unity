@@ -1196,6 +1196,7 @@ MonoBehaviour:
   moveInX: 0
   jumpForce: 18
   gravityScale: 1
+  wallSlide: 3
   isEdgeR: 0
   isEdgeL: 0
   isWallEdge: 0

@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 20;
     [Range(0f, 50f), Tooltip("Gravity Scale of Player body.")]
     public float gravityScale = 5;
+    [Range(0f, 10f), Tooltip("Divisor of Gravity Scale for wall Slide.")]
+    public float wallSlide;
     public bool isEdgeR, isEdgeL, isWallEdge, isGround;
     public Transform footPosition;
     public LayerMask layerOfGround;
@@ -43,13 +45,13 @@ public class PlayerController : MonoBehaviour
         moveInX = Input.GetAxis("Horizontal");
         EdgeCheck();
         AnimationsCheck();
-        
+
     }
 
     private void EdgeCheck()
     {
         isGround = Physics2D.OverlapBox(footPosition.position + new Vector3(0, -0.03f), new Vector2(0.8f, 0.07f), 0, layerOfGround);
-        
+
         isEdgeL = !Physics2D.OverlapBox(transform.position + new Vector3(0.3f, -0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
         isEdgeR = !Physics2D.OverlapBox(transform.position - new Vector3(0.3f, 0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
 
@@ -59,35 +61,42 @@ public class PlayerController : MonoBehaviour
     {
         //animation
         aniPlayer.SetFloat("Run", math.abs(moveInX));
-        if (rbPlayer.velocity.x > 0.1f && !isWallEdge)
+        if (rbPlayer.velocity.x > 0.01f && !isWallEdge)
+        {
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
+        }
         else
-            if (rbPlayer.velocity.x < -0.1f && !isWallEdge)
+        if (rbPlayer.velocity.x < -0.01f && !isWallEdge)
+        {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
 
-        aniPlayer.SetFloat("JumpForce", rbPlayer.velocity.y);
-        aniPlayer.SetBool("IsGround", isGround);
-
-        if (isEdgeL || isEdgeR)
+        }
+        else
+        if (isEdgeL || isEdgeR && isGround)
         {
-            if (isEdgeL && !isEdgeR)
+            if (isEdgeL && !isEdgeR && rbPlayer.velocity.y <=0)
             {
                 aniPlayer.SetBool("IsBalance", true);
                 GetComponentInChildren<SpriteRenderer>().flipX = false;
             }
             else
-            if (isEdgeR && !isEdgeL)
+            if (isEdgeR && !isEdgeL && rbPlayer.velocity.y <= 0)
             {
                 aniPlayer.SetBool("IsBalance", true);
                 GetComponentInChildren<SpriteRenderer>().flipX = true;
             }
         }
         else
-        { 
             aniPlayer.SetBool("IsBalance", false);
-        }
+        
 
-        WallSlideCheck();
+        aniPlayer.SetFloat("JumpForce", rbPlayer.velocity.y);
+        aniPlayer.SetBool("IsGround", isGround);
+
+        if (rbPlayer.velocity.y <= 0)
+        {
+            WallSlideCheck();
+        }
 
     }
     private void WallSlideCheck()
@@ -98,7 +107,7 @@ public class PlayerController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipX = false;
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x - 0.1f, rbPlayer.velocity.y);
 
-            rbPlayer.gravityScale = gravityScale / 2;
+            rbPlayer.gravityScale = gravityScale / wallSlide;
             //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
         }
         else
@@ -108,7 +117,7 @@ public class PlayerController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipX = true;
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x + 0.1f, rbPlayer.velocity.y);
 
-            rbPlayer.gravityScale = gravityScale / 2;
+            rbPlayer.gravityScale = gravityScale / wallSlide;
             //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
         }
         else
