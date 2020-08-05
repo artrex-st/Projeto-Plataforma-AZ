@@ -9,7 +9,7 @@ public class Jump : MonoBehaviour
     [SerializeField]
     private Transform footPosition;
     private LayerMask layerOfGround;
-    private Boolean jumpWithTime = false,jumpRequest = false;
+    private Boolean jumpWithTime = false,jumpRequest = false, wallJumpRequest= false;
     private float jumpForce;
 
     private void Start()
@@ -27,6 +27,10 @@ public class Jump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
         {
             jumpRequest = true;
+        }
+        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge)
+        {
+            wallJumpRequest = true;
             GetComponentInChildren<Animator>().SetTrigger("Jump");
         }
     }
@@ -42,6 +46,12 @@ public class Jump : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpRequest = false;
+        }
+        if (wallJumpRequest)
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerController>().moveInX * 20, jumpForce / GetComponent<PlayerController>().wallSlide), ForceMode2D.Impulse);
+            Debug.Log($"Wall Jump {GetComponent<PlayerController>().speed}");
+            wallJumpRequest = false;
         }
     }
 }

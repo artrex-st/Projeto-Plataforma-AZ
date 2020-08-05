@@ -24,7 +24,12 @@ public class PlayerController : MonoBehaviour
     public float gravityScale = 5;
     [Range(0f, 10f), Tooltip("Divisor of Gravity Scale for wall Slide.")]
     public float wallSlide;
-    public bool isEdgeR, isEdgeL, isWallEdge, isGround;
+
+
+    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce;
+    public float ecoSpeed;
+    [Tooltip("testes")]
+    public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce;
     public Transform footPosition;
     public LayerMask layerOfGround;
     public Rigidbody2D rbPlayer;
@@ -41,6 +46,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        visEdgeR = isEdgeR;
+        visEdgeL = isEdgeL;
+        visWallEdge = isWallEdge;
+        visGround = isGround;
+        isIce = visIce;
         rbPlayer.gravityScale = gravityScale;
         moveInX = Input.GetAxis("Horizontal");
         EdgeCheck();
@@ -60,7 +70,9 @@ public class PlayerController : MonoBehaviour
     private void AnimationsCheck()
     {
         //animation
+        aniPlayer.SetBool("IsIce",isIce);
         aniPlayer.SetFloat("Run", math.abs(moveInX));
+        aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
         if (rbPlayer.velocity.x > 0.01f && !isWallEdge)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
@@ -89,7 +101,6 @@ public class PlayerController : MonoBehaviour
         else
             aniPlayer.SetBool("IsBalance", false);
         
-
         aniPlayer.SetFloat("JumpForce", rbPlayer.velocity.y);
         aniPlayer.SetBool("IsGround", isGround);
 

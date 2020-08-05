@@ -1165,6 +1165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc44a9684854cb044b2d78951cf91520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &1376817791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,12 +1196,14 @@ MonoBehaviour:
   speed: 5
   moveInX: 0
   jumpForce: 18
-  gravityScale: 1
+  gravityScale: 2
   wallSlide: 3
-  isEdgeR: 0
-  isEdgeL: 0
-  isWallEdge: 0
-  isGround: 0
+  ecoSpeed: 0
+  visEdgeR: 0
+  visEdgeL: 0
+  visWallEdge: 0
+  visGround: 0
+  visIce: 1
   footPosition: {fileID: 1374984600}
   layerOfGround:
     serializedVersion: 2
