@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: 2578dee71a614994d9c9efba7c86d70b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7938237041594108291
+    second: Zavrik_Player_balance_check_0
+  - first:
+      213: 6913982750299336357
+    second: Zavrik_Player_balance_check_1
+  - first:
+      213: 8958280885612508037
+    second: Zavrik_Player_balance_check_2
+  - first:
+      213: -5416539298053590996
+    second: Zavrik_Player_balance_check_3
+  - first:
+      213: 9188542240369156155
+    second: Zavrik_Player_balance_check_4
+  - first:
+      213: -4106196698308908475
+    second: Zavrik_Player_balance_check_5
+  - first:
+      213: -5357715992273722979
+    second: Zavrik_Player_balance_check_6
+  - first:
+      213: -7926194003523045070
+    second: Zavrik_Player_balance_check_7
+  - first:
+      213: -7092112204720595999
+    second: Zavrik_Player_balance_check_8
+  - first:
+      213: 1113949728420691308
+    second: Zavrik_Player_balance_check_9
+  - first:
+      213: -6484276686845339214
+    second: Zavrik_Player_balance_check_10
+  - first:
+      213: 6479999347969544437
+    second: Zavrik_Player_balance_check_11
+  - first:
+      213: 8590022111106114107
+    second: Zavrik_Player_balance_check_12
+  - first:
+      213: -6764617235304986570
+    second: Zavrik_Player_balance_check_13
+  - first:
+      213: 8639299722762396231
+    second: Zavrik_Player_balance_check_14
+  - first:
+      213: -1318065264710833566
+    second: Zavrik_Player_balance_check_15
+  - first:
+      213: -3900829544205316384
+    second: Zavrik_Player_balance_check_16
+  - first:
+      213: 6046433874118770860
+    second: Zavrik_Player_balance_check_17
+  - first:
+      213: -326949783756204108
+    second: Zavrik_Player_balance_check_18
+  - first:
+      213: -4536326163859880151
+    second: Zavrik_Player_balance_check_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389801fd7884a2e60800000000000000
+      internalID: 7938237041594108291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae25c6fda663ff50800000000000000
+      internalID: 6913982750299336357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583fa11a005325c70800000000000000
+      internalID: 8958280885612508037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_3
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20729bd43694d4b0800000000000000
+      internalID: -5416539298053590996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_4
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3020e01c72448f70800000000000000
+      internalID: 9188542240369156155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_5
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a6a63cbdbd307c0800000000000000
+      internalID: -4106196698308908475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_6
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91681101b195a5b0800000000000000
+      internalID: -5357715992273722979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_7
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2397d2f6c80800290800000000000000
+      internalID: -7926194003523045070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_8
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb9a628681c39d90800000000000000
+      internalID: -7092112204720595999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_9
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d7824406b857f00800000000000000
+      internalID: 1113949728420691308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_10
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b99c3f55b83306a0800000000000000
+      internalID: -6484276686845339214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_11
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0dc7013159de950800000000000000
+      internalID: 6479999347969544437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_12
+      rect:
+        serializedVersion: 2
+        x: 2844
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b322b312993e53770800000000000000
+      internalID: 8590022111106114107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_13
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638492807704f12a0800000000000000
+      internalID: -6764617235304986570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_14
+      rect:
+        serializedVersion: 2
+        x: 3318
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742226b2355f4e770800000000000000
+      internalID: 8639299722762396231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_15
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a212a00aa45bde0800000000000000
+      internalID: -1318065264710833566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_16
+      rect:
+        serializedVersion: 2
+        x: 3792
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee0b4072387dd9c0800000000000000
+      internalID: -3900829544205316384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_17
+      rect:
+        serializedVersion: 2
+        x: 4029
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca00db8b29f39e350800000000000000
+      internalID: 6046433874118770860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_18
+      rect:
+        serializedVersion: 2
+        x: 4266
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b712d767e0767bf0800000000000000
+      internalID: -326949783756204108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_balance_check_19
+      rect:
+        serializedVersion: 2
+        x: 4503
+        y: 0
+        width: 237
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92742d1736bbb01c0800000000000000
+      internalID: -4536326163859880151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

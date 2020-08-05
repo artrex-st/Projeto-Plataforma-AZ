@@ -11,7 +11,6 @@ public class MoveVelocity : MonoBehaviour, IMove
 {
     private Vector2 velocityVector;
     private Rigidbody2D rb2D;
-    [SerializeField]
     private float speed;
     //private Character_Base characterBase;
 
@@ -34,7 +33,7 @@ public class MoveVelocity : MonoBehaviour, IMove
     {
         rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
     }
-    private void IceMove()
+    private void IceMove() //teste
     {
         speed += Mathf.Clamp(velocityVector.x, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
         rb2D.velocity = new Vector2(speed, rb2D.velocity.y);

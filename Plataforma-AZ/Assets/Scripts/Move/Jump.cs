@@ -11,7 +11,6 @@ public class Jump : MonoBehaviour
     private LayerMask layerOfGround;
     private Boolean jumpWithTime = false,jumpRequest = false;
     private float jumpForce;
-    public float teste;
 
     private void Start()
     {

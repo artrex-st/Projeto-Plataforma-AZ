@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ArtrexUtils;
 using Unity.Mathematics;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerController : MonoBehaviour
 {
@@ -49,42 +50,80 @@ public class PlayerController : MonoBehaviour
     {
         isGround = Physics2D.OverlapBox(footPosition.position + new Vector3(0, -0.03f), new Vector2(0.8f, 0.07f), 0, layerOfGround);
         
-        isEdgeL = !Physics2D.OverlapBox(transform.position + new Vector3(0.5f, -0.28f), new Vector2(0.1f, 2.2f), 0, layerOfGround);
-        isEdgeR = !Physics2D.OverlapBox(transform.position - new Vector3(0.5f, 0.28f), new Vector2(0.1f, 2.2f), 0, layerOfGround);
+        isEdgeL = !Physics2D.OverlapBox(transform.position + new Vector3(0.3f, -0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
+        isEdgeR = !Physics2D.OverlapBox(transform.position - new Vector3(0.3f, 0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
 
         isWallEdge = Physics2D.OverlapBox(transform.position, new Vector2(1.3f, 0.2f), 0, layerOfGround);
     }
     private void AnimationsCheck()
     {
         //animation
-        aniPlayer.SetFloat("Run", math.abs(rbPlayer.velocity.x));
-        if (rbPlayer.velocity.x > 0 && !isWallEdge)
+        aniPlayer.SetFloat("Run", math.abs(moveInX));
+        if (rbPlayer.velocity.x > 0.1f && !isWallEdge)
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
         else
-            if (rbPlayer.velocity.x < 0 && !isWallEdge)
+            if (rbPlayer.velocity.x < -0.1f && !isWallEdge)
             GetComponentInChildren<SpriteRenderer>().flipX = true;
 
         aniPlayer.SetFloat("JumpForce", rbPlayer.velocity.y);
         aniPlayer.SetBool("IsGround", isGround);
-        if (isWallEdge)
-        {
-            if (isEdgeL)
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = true;
-            }else
-                GetComponentInChildren<SpriteRenderer>().flipX = false;
 
-            aniPlayer.SetBool("Wall.Slide",isWallEdge);
+        if (isEdgeL || isEdgeR)
+        {
+            if (isEdgeL && !isEdgeR)
+            {
+                aniPlayer.SetBool("IsBalance", true);
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else
+            if (isEdgeR && !isEdgeL)
+            {
+                aniPlayer.SetBool("IsBalance", true);
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+        }
+        else
+        { 
+            aniPlayer.SetBool("IsBalance", false);
         }
 
+        WallSlideCheck();
+
+    }
+    private void WallSlideCheck()
+    {
+        if (isEdgeL && !isEdgeR && !isGround && rbPlayer.velocity.y <= 0)
+        {
+            aniPlayer.SetBool("Wall.Slide", true);
+            GetComponentInChildren<SpriteRenderer>().flipX = false;
+            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x - 0.1f, rbPlayer.velocity.y);
+
+            rbPlayer.gravityScale = gravityScale / 2;
+            //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
+        }
+        else
+        if (isEdgeR && !isEdgeL && !isGround && rbPlayer.velocity.y <= 0)
+        {
+            aniPlayer.SetBool("Wall.Slide", true);
+            GetComponentInChildren<SpriteRenderer>().flipX = true;
+            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x + 0.1f, rbPlayer.velocity.y);
+
+            rbPlayer.gravityScale = gravityScale / 2;
+            //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
+        }
+        else
+        {
+            aniPlayer.SetBool("Wall.Slide", false);
+            rbPlayer.gravityScale = gravityScale;
+        }
     }
     void OnDrawGizmosSelected()
     {
         // Draw a yellow cube at the transform position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position + new Vector3(0.5f, -0.28f), new Vector3(0.1f, 2.2f, 1));
+        Gizmos.DrawWireCube(transform.position + new Vector3(0.3f, -0.28f), new Vector3(0.36f, 2.2f, 1));
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position - new Vector3(0.5f, 0.28f), new Vector3(0.1f, 2.2f, 1));
+        Gizmos.DrawWireCube(transform.position - new Vector3(0.3f, 0.28f), new Vector3(0.36f, 2.2f, 1));
     }
 }
