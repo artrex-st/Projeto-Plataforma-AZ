@@ -6,11 +6,12 @@ using System;
 
 public class Jump : MonoBehaviour
 {
+    [SerializeField]
     private Transform footPosition;
     private LayerMask layerOfGround;
-    private Boolean jumpWithTime = false;
-    private Boolean jumpRequest = false;
+    private Boolean jumpWithTime = false,jumpRequest = false;
     private float jumpForce;
+    public float teste;
 
     private void Start()
     {
@@ -21,16 +22,21 @@ public class Jump : MonoBehaviour
 
     private void Update()
     {
+        //teste
+        Start();
+        //
         if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
         {
             jumpRequest = true;
             GetComponentInChildren<Animator>().SetTrigger("Jump");
         }
-
-        GetComponentInChildren<Animator>().SetFloat("JumpForce", GetComponent<Rigidbody2D>().velocity.y);
-        GetComponentInChildren<Animator>().SetBool("IsGround", Check.FGrounded(footPosition, layerOfGround));
     }
-
+    //private void OnDrawGizmos()
+    //{
+    //    //Gizmo do isGround
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawWireCube(footPosition.position + new Vector3(0, -0.03f), new Vector2(0.8f, 0.07f));
+    //}
     void FixedUpdate()
     {
         if (jumpRequest)
