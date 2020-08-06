@@ -24,9 +24,10 @@ public class PlayerController : MonoBehaviour
     public float gravityScale = 5;
     [Range(0f, 10f), Tooltip("Divisor of Gravity Scale for wall Slide.")]
     public float wallSlide;
+    public float flipingCd;
 
 
-    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce;
+    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping;
     public float ecoSpeed;
     [Tooltip("testes")]
     public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce;
@@ -71,6 +72,8 @@ public class PlayerController : MonoBehaviour
     {
         //animation
         aniPlayer.SetBool("IsIce",isIce);
+        aniPlayer.SetBool("IsFliping", isFliping); // wall jump
+
         aniPlayer.SetFloat("Run", math.abs(moveInX));
         aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
         if (rbPlayer.velocity.x > 0.01f && !isWallEdge)
@@ -116,7 +119,6 @@ public class PlayerController : MonoBehaviour
         {
             aniPlayer.SetBool("Wall.Slide", true);
             GetComponentInChildren<SpriteRenderer>().flipX = false;
-            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x - 0.1f, rbPlayer.velocity.y);
 
             rbPlayer.gravityScale = gravityScale / wallSlide;
             //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
@@ -126,7 +128,6 @@ public class PlayerController : MonoBehaviour
         {
             aniPlayer.SetBool("Wall.Slide", true);
             GetComponentInChildren<SpriteRenderer>().flipX = true;
-            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x + 0.1f, rbPlayer.velocity.y);
 
             rbPlayer.gravityScale = gravityScale / wallSlide;
             //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);

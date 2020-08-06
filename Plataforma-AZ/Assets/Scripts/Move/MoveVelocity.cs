@@ -32,19 +32,24 @@ public class MoveVelocity : MonoBehaviour, IMove
         if (PlayerController.isGround && !PlayerController.isIce)
         {
             NormalMove();
+            Debug.Log("normal");
         }else
         if (PlayerController.isGround && PlayerController.isIce)
         {
             IceMove();
+            Debug.Log("Ice");
         }
         else
-        if (!PlayerController.isGround && !PlayerController.isWallEdge)
+        if (!PlayerController.isGround && !PlayerController.isWallEdge && !PlayerController.isFliping)
         {
             AirMove();
-        }else
-        if (!PlayerController.isGround && PlayerController.isWallEdge)
+            Debug.Log("Air");
+        }
+        else
+        if (!PlayerController.isGround && PlayerController.isFliping)
         {
-            WallMove();
+            WallToFlip();
+            Debug.Log("Wall to Flip");
         }
     }
     private void NormalMove()
@@ -53,28 +58,29 @@ public class MoveVelocity : MonoBehaviour, IMove
     }
     private void AirMove()
     {
-        speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
-        rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
-        if (velocityVector.x == 0 || PlayerController.isGround)
-        {
-            speed = 0;
-        }
+        //speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
+        rb2D.velocity = new Vector2(GetComponent<PlayerController>().speed * velocityVector.x / 2, rb2D.velocity.y);
     }
-    private void WallMove()
+    private void WallToFlip()
     {
-        rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed / 2f, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed * 1.5f, rb2D.velocity.y);
     }
     private void IceMove() //teste
     {
         speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
         rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
+        EcoMoveReset();
+    }
+    private void EcoMoveReset()
+    {
         if (speed >= 0.1f)
         {
-            speed -= Time.deltaTime;
-        }else
-        if (speed <= -0.1f)
+            speed -= 0.02f;
+        }
+        else
+        if (speed <= -0.01f)
         {
-            speed += Time.deltaTime;
+            speed += 0.02f;
         }
     }
 }

@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using ArtrexUtils;
+﻿using ArtrexUtils;
 using System;
+using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
@@ -10,13 +8,15 @@ public class Jump : MonoBehaviour
     private Transform footPosition;
     private LayerMask layerOfGround;
     private Boolean jumpWithTime = false,jumpRequest = false, wallJumpRequest= false;
-    private float jumpForce;
+    [SerializeField]
+    private float jumpForce, flipingCd, flipingTime;
 
     private void Start()
     {
         footPosition = GetComponent<PlayerController>().footPosition;
         layerOfGround = GetComponent<PlayerController>().layerOfGround;
         jumpForce = GetComponent<PlayerController>().jumpForce;
+        flipingCd = GetComponent<PlayerController>().flipingCd;
     }
 
     private void Update()
@@ -28,10 +28,9 @@ public class Jump : MonoBehaviour
         {
             jumpRequest = true;
         }
-        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge)
+        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd)
         {
             wallJumpRequest = true;
-            GetComponentInChildren<Animator>().SetTrigger("Jump");
         }
     }
     //private void OnDrawGizmos()
@@ -49,9 +48,24 @@ public class Jump : MonoBehaviour
         }
         if (wallJumpRequest)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerController>().moveInX * 20, jumpForce / GetComponent<PlayerController>().wallSlide), ForceMode2D.Impulse);
-            Debug.Log($"Wall Jump {GetComponent<PlayerController>().speed}");
+            if (PlayerController.isEdgeL && GetComponent<PlayerController>().moveInX > 0)
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerController>().moveInX * jumpForce, jumpForce), ForceMode2D.Impulse);
+                PlayerController.isFliping = true;
+                flipingTime = 0;
+            }else
+            if (PlayerController.isEdgeR && GetComponent<PlayerController>().moveInX < 0)
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<PlayerController>().moveInX * jumpForce, jumpForce), ForceMode2D.Impulse);
+                PlayerController.isFliping = true;
+                flipingTime = 0;
+            }            
             wallJumpRequest = false;
+        }
+        flipingTime += Time.deltaTime;
+        if (PlayerController.isFliping && flipingTime >=1 || PlayerController.isGround)
+        {
+            PlayerController.isFliping = false;
         }
     }
 }
