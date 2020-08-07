@@ -122,6 +122,126 @@ TextureImporter:
   - first:
       213: 2331782776821650698
     second: Zavrik_Player_idle_39
+  - first:
+      213: 1012156170464188543
+    second: Zavrik_Player_idle_0
+  - first:
+      213: 7606553890385320940
+    second: Zavrik_Player_idle_1
+  - first:
+      213: -6528616797987778370
+    second: Zavrik_Player_idle_2
+  - first:
+      213: -6121100492170811038
+    second: Zavrik_Player_idle_3
+  - first:
+      213: 7682146459743664235
+    second: Zavrik_Player_idle_4
+  - first:
+      213: -3960955690236315939
+    second: Zavrik_Player_idle_5
+  - first:
+      213: -5296155521607076027
+    second: Zavrik_Player_idle_6
+  - first:
+      213: -7424065059511576957
+    second: Zavrik_Player_idle_7
+  - first:
+      213: 8653293423206419298
+    second: Zavrik_Player_idle_8
+  - first:
+      213: -3980650222483820893
+    second: Zavrik_Player_idle_9
+  - first:
+      213: -4361861859178737983
+    second: Zavrik_Player_idle_10
+  - first:
+      213: -4122409782924846638
+    second: Zavrik_Player_idle_11
+  - first:
+      213: 8176583518541503930
+    second: Zavrik_Player_idle_12
+  - first:
+      213: 7091264037608701636
+    second: Zavrik_Player_idle_13
+  - first:
+      213: -3040719805500921324
+    second: Zavrik_Player_idle_14
+  - first:
+      213: 4912932590773451638
+    second: Zavrik_Player_idle_15
+  - first:
+      213: 4771759948462812989
+    second: Zavrik_Player_idle_16
+  - first:
+      213: 5246061481213869227
+    second: Zavrik_Player_idle_17
+  - first:
+      213: 7235410766884323106
+    second: Zavrik_Player_idle_18
+  - first:
+      213: 2035625064604096962
+    second: Zavrik_Player_idle_19
+  - first:
+      213: 7420661828126123625
+    second: Zavrik_Player_idle_20
+  - first:
+      213: 7340824413671749825
+    second: Zavrik_Player_idle_21
+  - first:
+      213: -5241431389159449735
+    second: Zavrik_Player_idle_22
+  - first:
+      213: -6894390994071937022
+    second: Zavrik_Player_idle_23
+  - first:
+      213: 7019725287433511528
+    second: Zavrik_Player_idle_24
+  - first:
+      213: -7827972428764914280
+    second: Zavrik_Player_idle_25
+  - first:
+      213: 6272410532368978381
+    second: Zavrik_Player_idle_26
+  - first:
+      213: 1230395049975439206
+    second: Zavrik_Player_idle_27
+  - first:
+      213: -102143666077947603
+    second: Zavrik_Player_idle_28
+  - first:
+      213: 3688528452703382927
+    second: Zavrik_Player_idle_29
+  - first:
+      213: -8058314694388753571
+    second: Zavrik_Player_idle_30
+  - first:
+      213: 8692385270818088875
+    second: Zavrik_Player_idle_31
+  - first:
+      213: -7984490181061810221
+    second: Zavrik_Player_idle_32
+  - first:
+      213: -4376742377992732591
+    second: Zavrik_Player_idle_33
+  - first:
+      213: 7704570928565781545
+    second: Zavrik_Player_idle_34
+  - first:
+      213: 1481379850625835123
+    second: Zavrik_Player_idle_35
+  - first:
+      213: -8632009269631298535
+    second: Zavrik_Player_idle_36
+  - first:
+      213: 5289229746614247215
+    second: Zavrik_Player_idle_37
+  - first:
+      213: -1491882359445246901
+    second: Zavrik_Player_idle_38
+  - first:
+      213: -5982078496209733061
+    second: Zavrik_Player_idle_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -224,7 +344,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -233,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e6a9d2ea2535c60800000000000000
-      internalID: 7805673487206084172
+      spriteID: f78dcb5aca6eb0e00800000000000000
+      internalID: 1012156170464188543
       vertices: []
       indices: 
       edges: []
@@ -243,9 +363,9 @@ TextureImporter:
       name: Zavrik_Player_idle_1
       rect:
         serializedVersion: 2
-        x: 138
+        x: 141
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -254,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f64cdbcd34e0570800000000000000
-      internalID: 8434753767467151158
+      spriteID: ceb58494678ef8960800000000000000
+      internalID: 7606553890385320940
       vertices: []
       indices: 
       edges: []
@@ -264,9 +384,9 @@ TextureImporter:
       name: Zavrik_Player_idle_2
       rect:
         serializedVersion: 2
-        x: 276
+        x: 282
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -275,8 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0b823947206dba80800000000000000
-      internalID: -8449491604029142262
+      spriteID: eb05a41cc91b565a0800000000000000
+      internalID: -6528616797987778370
       vertices: []
       indices: 
       edges: []
@@ -285,9 +405,9 @@ TextureImporter:
       name: Zavrik_Player_idle_3
       rect:
         serializedVersion: 2
-        x: 414
+        x: 423
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -296,8 +416,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10743be5c436aef90800000000000000
-      internalID: -6923612297471244543
+      spriteID: 269a0b9888b7d0ba0800000000000000
+      internalID: -6121100492170811038
       vertices: []
       indices: 
       edges: []
@@ -306,9 +426,9 @@ TextureImporter:
       name: Zavrik_Player_idle_4
       rect:
         serializedVersion: 2
-        x: 552
+        x: 564
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -317,8 +437,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d51bf8b282044b0800000000000000
-      internalID: -5458318580813570764
+      spriteID: b68bb8dd0877c9a60800000000000000
+      internalID: 7682146459743664235
       vertices: []
       indices: 
       edges: []
@@ -327,9 +447,9 @@ TextureImporter:
       name: Zavrik_Player_idle_5
       rect:
         serializedVersion: 2
-        x: 690
+        x: 705
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -338,8 +458,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dcc97338a7b9b480800000000000000
-      internalID: -8882866856965583663
+      spriteID: dd6f66829cbd709c0800000000000000
+      internalID: -3960955690236315939
       vertices: []
       indices: 
       edges: []
@@ -348,9 +468,9 @@ TextureImporter:
       name: Zavrik_Player_idle_6
       rect:
         serializedVersion: 2
-        x: 828
+        x: 846
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -359,8 +479,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3165b4b33fb8e9ca0800000000000000
-      internalID: -6008210976077556205
+      spriteID: 547f2630d964086b0800000000000000
+      internalID: -5296155521607076027
       vertices: []
       indices: 
       edges: []
@@ -369,9 +489,9 @@ TextureImporter:
       name: Zavrik_Player_idle_7
       rect:
         serializedVersion: 2
-        x: 966
+        x: 987
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -380,8 +500,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 783a7887bc8c63d90800000000000000
-      internalID: -7118281384786418809
+      spriteID: 3865c6aa92c68f890800000000000000
+      internalID: -7424065059511576957
       vertices: []
       indices: 
       edges: []
@@ -390,9 +510,9 @@ TextureImporter:
       name: Zavrik_Player_idle_8
       rect:
         serializedVersion: 2
-        x: 1104
+        x: 1128
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -401,8 +521,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c615c6a298809ce50800000000000000
-      internalID: 6829999695099351404
+      spriteID: 26b4173758ca61870800000000000000
+      internalID: 8653293423206419298
       vertices: []
       indices: 
       edges: []
@@ -411,9 +531,9 @@ TextureImporter:
       name: Zavrik_Player_idle_9
       rect:
         serializedVersion: 2
-        x: 1242
+        x: 1269
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -422,8 +542,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521093f9ab728ea90800000000000000
-      internalID: -7284528714783063771
+      spriteID: 3aea5c986b3e1c8c0800000000000000
+      internalID: -3980650222483820893
       vertices: []
       indices: 
       edges: []
@@ -432,9 +552,9 @@ TextureImporter:
       name: Zavrik_Player_idle_10
       rect:
         serializedVersion: 2
-        x: 1380
+        x: 1410
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -443,8 +563,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430b174db5d0055f0800000000000000
-      internalID: -770100848222949324
+      spriteID: 1ce835ccfbd8773c0800000000000000
+      internalID: -4361861859178737983
       vertices: []
       indices: 
       edges: []
@@ -453,9 +573,9 @@ TextureImporter:
       name: Zavrik_Player_idle_11
       rect:
         serializedVersion: 2
-        x: 1518
+        x: 1551
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -464,8 +584,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d1ce12d3a1c0d10800000000000000
-      internalID: 2093076776684887401
+      spriteID: 2d95b26d4224ac6c0800000000000000
+      internalID: -4122409782924846638
       vertices: []
       indices: 
       edges: []
@@ -474,9 +594,9 @@ TextureImporter:
       name: Zavrik_Player_idle_12
       rect:
         serializedVersion: 2
-        x: 1656
+        x: 1692
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -485,8 +605,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c1305c62e5903d20800000000000000
-      internalID: 3256267330301211076
+      spriteID: abddaf2836f097170800000000000000
+      internalID: 8176583518541503930
       vertices: []
       indices: 
       edges: []
@@ -495,9 +615,9 @@ TextureImporter:
       name: Zavrik_Player_idle_13
       rect:
         serializedVersion: 2
-        x: 1794
+        x: 1833
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -506,8 +626,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deb02574c4ad68800800000000000000
-      internalID: 614418420331580397
+      spriteID: 4ce3b22321b396260800000000000000
+      internalID: 7091264037608701636
       vertices: []
       indices: 
       edges: []
@@ -516,9 +636,9 @@ TextureImporter:
       name: Zavrik_Player_idle_14
       rect:
         serializedVersion: 2
-        x: 1932
+        x: 1974
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -527,8 +647,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cb51917a66b56300800000000000000
-      internalID: 244802323049700292
+      spriteID: 41a6f9382713dc5d0800000000000000
+      internalID: -3040719805500921324
       vertices: []
       indices: 
       edges: []
@@ -537,9 +657,9 @@ TextureImporter:
       name: Zavrik_Player_idle_15
       rect:
         serializedVersion: 2
-        x: 2070
+        x: 2115
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -548,8 +668,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 497681c4d6cf3c310800000000000000
-      internalID: 1424259453537511316
+      spriteID: 67bbd76592e3e2440800000000000000
+      internalID: 4912932590773451638
       vertices: []
       indices: 
       edges: []
@@ -558,9 +678,9 @@ TextureImporter:
       name: Zavrik_Player_idle_16
       rect:
         serializedVersion: 2
-        x: 2208
+        x: 2256
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -569,8 +689,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b870462a3b967a680800000000000000
-      internalID: -8743903931272001653
+      spriteID: d3fef892462b83240800000000000000
+      internalID: 4771759948462812989
       vertices: []
       indices: 
       edges: []
@@ -579,9 +699,9 @@ TextureImporter:
       name: Zavrik_Player_idle_17
       rect:
         serializedVersion: 2
-        x: 2346
+        x: 2397
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -590,8 +710,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1602529336b1d97b0800000000000000
-      internalID: -5215982680450719647
+      spriteID: bacbc915f11cdc840800000000000000
+      internalID: 5246061481213869227
       vertices: []
       indices: 
       edges: []
@@ -600,9 +720,9 @@ TextureImporter:
       name: Zavrik_Player_idle_18
       rect:
         serializedVersion: 2
-        x: 2484
+        x: 2538
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -611,8 +731,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5450a4d4054c07700800000000000000
-      internalID: 536144204830213445
+      spriteID: 22f3d24f1c7596460800000000000000
+      internalID: 7235410766884323106
       vertices: []
       indices: 
       edges: []
@@ -621,9 +741,9 @@ TextureImporter:
       name: Zavrik_Player_idle_19
       rect:
         serializedVersion: 2
-        x: 2622
+        x: 2679
         y: 279
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -632,8 +752,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ef24ff1a702cac50800000000000000
-      internalID: 6677748056377798633
+      spriteID: 2c9db97063eff3c10800000000000000
+      internalID: 2035625064604096962
       vertices: []
       indices: 
       edges: []
@@ -644,7 +764,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -653,8 +773,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc31c7206b4cc160800000000000000
-      internalID: 7047090393283902649
+      spriteID: 96622c7cd9c7bf660800000000000000
+      internalID: 7420661828126123625
       vertices: []
       indices: 
       edges: []
@@ -663,9 +783,9 @@ TextureImporter:
       name: Zavrik_Player_idle_21
       rect:
         serializedVersion: 2
-        x: 138
+        x: 141
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -674,8 +794,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fca4c9a6950fc340800000000000000
-      internalID: 4886130265371749623
+      spriteID: 1c87b6f29e8dfd560800000000000000
+      internalID: 7340824413671749825
       vertices: []
       indices: 
       edges: []
@@ -684,9 +804,9 @@ TextureImporter:
       name: Zavrik_Player_idle_22
       rect:
         serializedVersion: 2
-        x: 276
+        x: 282
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -695,8 +815,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6abf551d2c7ee8c0800000000000000
-      internalID: -3968097688592860561
+      spriteID: 97b919efbe1b247b0800000000000000
+      internalID: -5241431389159449735
       vertices: []
       indices: 
       edges: []
@@ -705,9 +825,9 @@ TextureImporter:
       name: Zavrik_Player_idle_23
       rect:
         serializedVersion: 2
-        x: 414
+        x: 423
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -716,8 +836,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c99285aa338c300800000000000000
-      internalID: 272524584172493978
+      spriteID: 200a0bf3be33250a0800000000000000
+      internalID: -6894390994071937022
       vertices: []
       indices: 
       edges: []
@@ -726,9 +846,9 @@ TextureImporter:
       name: Zavrik_Player_idle_24
       rect:
         serializedVersion: 2
-        x: 552
+        x: 564
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -737,8 +857,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47f515d23b5b1eb0800000000000000
-      internalID: -4748101108250577074
+      spriteID: 8622d42f4f21b6160800000000000000
+      internalID: 7019725287433511528
       vertices: []
       indices: 
       edges: []
@@ -747,9 +867,9 @@ TextureImporter:
       name: Zavrik_Player_idle_25
       rect:
         serializedVersion: 2
-        x: 690
+        x: 705
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -758,8 +878,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22cceab1a6d3e9220800000000000000
-      internalID: 2494498769550101538
+      spriteID: 89d5ae7ec847d5390800000000000000
+      internalID: -7827972428764914280
       vertices: []
       indices: 
       edges: []
@@ -768,9 +888,9 @@ TextureImporter:
       name: Zavrik_Player_idle_26
       rect:
         serializedVersion: 2
-        x: 828
+        x: 846
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -779,8 +899,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c194c9ae9d1cf4c60800000000000000
-      internalID: 7804669820944533788
+      spriteID: dc1954385241c0750800000000000000
+      internalID: 6272410532368978381
       vertices: []
       indices: 
       edges: []
@@ -789,9 +909,9 @@ TextureImporter:
       name: Zavrik_Player_idle_27
       rect:
         serializedVersion: 2
-        x: 966
+        x: 987
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -800,8 +920,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34bb775e3e3cd2f50800000000000000
-      internalID: 6858353191129955139
+      spriteID: 66f5f2f67cd331110800000000000000
+      internalID: 1230395049975439206
       vertices: []
       indices: 
       edges: []
@@ -810,9 +930,9 @@ TextureImporter:
       name: Zavrik_Player_idle_28
       rect:
         serializedVersion: 2
-        x: 1104
+        x: 1128
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -821,8 +941,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8710f015c7a9d6a30800000000000000
-      internalID: 4210191085387841912
+      spriteID: d292e5b70ec159ef0800000000000000
+      internalID: -102143666077947603
       vertices: []
       indices: 
       edges: []
@@ -831,9 +951,9 @@ TextureImporter:
       name: Zavrik_Player_idle_29
       rect:
         serializedVersion: 2
-        x: 1242
+        x: 1269
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -842,8 +962,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb817ab7d23706b40800000000000000
-      internalID: 5431467789794089151
+      spriteID: f8d6e47c519403330800000000000000
+      internalID: 3688528452703382927
       vertices: []
       indices: 
       edges: []
@@ -852,9 +972,9 @@ TextureImporter:
       name: Zavrik_Player_idle_30
       rect:
         serializedVersion: 2
-        x: 1380
+        x: 1410
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -863,8 +983,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516b235cdbf329e50800000000000000
-      internalID: 6814579270454785557
+      spriteID: d5bd5a0fa7d1b2090800000000000000
+      internalID: -8058314694388753571
       vertices: []
       indices: 
       edges: []
@@ -873,9 +993,9 @@ TextureImporter:
       name: Zavrik_Player_idle_31
       rect:
         serializedVersion: 2
-        x: 1518
+        x: 1551
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -884,8 +1004,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b6dc6e59e71edb60800000000000000
-      internalID: 7772676297967064760
+      spriteID: ba723fd795e81a870800000000000000
+      internalID: 8692385270818088875
       vertices: []
       indices: 
       edges: []
@@ -894,9 +1014,9 @@ TextureImporter:
       name: Zavrik_Player_idle_32
       rect:
         serializedVersion: 2
-        x: 1656
+        x: 1692
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -905,8 +1025,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f8fd38872f4f16d0800000000000000
-      internalID: -3017606194106861326
+      spriteID: 3d76735eb74613190800000000000000
+      internalID: -7984490181061810221
       vertices: []
       indices: 
       edges: []
@@ -915,9 +1035,9 @@ TextureImporter:
       name: Zavrik_Player_idle_33
       rect:
         serializedVersion: 2
-        x: 1794
+        x: 1833
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -926,8 +1046,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1acacf3898203a800800000000000000
-      internalID: 622343963155410081
+      spriteID: 15048560fffa243c0800000000000000
+      internalID: -4376742377992732591
       vertices: []
       indices: 
       edges: []
@@ -936,9 +1056,9 @@ TextureImporter:
       name: Zavrik_Player_idle_34
       rect:
         serializedVersion: 2
-        x: 1932
+        x: 1974
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -947,8 +1067,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad049f6a1280f57b0800000000000000
-      internalID: -5233455301352931110
+      spriteID: 92407ff50722cea60800000000000000
+      internalID: 7704570928565781545
       vertices: []
       indices: 
       edges: []
@@ -957,9 +1077,9 @@ TextureImporter:
       name: Zavrik_Player_idle_35
       rect:
         serializedVersion: 2
-        x: 2070
+        x: 2115
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -968,8 +1088,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c86ee09ee86570890800000000000000
-      internalID: -7491924283312118132
+      spriteID: 37069fd102bee8410800000000000000
+      internalID: 1481379850625835123
       vertices: []
       indices: 
       edges: []
@@ -978,9 +1098,9 @@ TextureImporter:
       name: Zavrik_Player_idle_36
       rect:
         serializedVersion: 2
-        x: 2208
+        x: 2256
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -989,8 +1109,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ada625c76087df20800000000000000
-      internalID: 3447365222953037219
+      spriteID: 9145fb9bd41f43880800000000000000
+      internalID: -8632009269631298535
       vertices: []
       indices: 
       edges: []
@@ -999,9 +1119,9 @@ TextureImporter:
       name: Zavrik_Player_idle_37
       rect:
         serializedVersion: 2
-        x: 2346
+        x: 2397
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1010,8 +1130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48f2b0662f1555620800000000000000
-      internalID: 2762204047997611908
+      spriteID: f2f1f565e6e176940800000000000000
+      internalID: 5289229746614247215
       vertices: []
       indices: 
       edges: []
@@ -1020,9 +1140,9 @@ TextureImporter:
       name: Zavrik_Player_idle_38
       rect:
         serializedVersion: 2
-        x: 2484
+        x: 2538
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1031,8 +1151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ff91f7402833950800000000000000
-      internalID: 6427624049011719956
+      spriteID: b4c289ef5e4cb4be0800000000000000
+      internalID: -1491882359445246901
       vertices: []
       indices: 
       edges: []
@@ -1041,9 +1161,9 @@ TextureImporter:
       name: Zavrik_Player_idle_39
       rect:
         serializedVersion: 2
-        x: 2622
+        x: 2679
         y: 0
-        width: 138
+        width: 141
         height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1052,8 +1172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0514d9c4182c5020800000000000000
-      internalID: 2331782776821650698
+      spriteID: b3a7ae65d436bfca0800000000000000
+      internalID: -5982078496209733061
       vertices: []
       indices: 
       edges: []

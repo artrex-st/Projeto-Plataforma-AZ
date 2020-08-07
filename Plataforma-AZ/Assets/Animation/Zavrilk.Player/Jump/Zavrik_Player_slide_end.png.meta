@@ -1,31 +1,13 @@
 fileFormatVersion: 2
-guid: e27128ac4496a1141b3ae47454fc6838
+guid: f4be5f75b7209204b87375d784350bb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -685629519003330049
-    second: Zavrik_Player_wall_slide_0
+      213: 7816949997948334113
+    second: Zavrik_Player_slide_end_0
   - first:
-      213: 5247823903768403255
-    second: Zavrik_Player_wall_slide_1
-  - first:
-      213: 2515791712415027803
-    second: Zavrik_Player_wall_slide_2
-  - first:
-      213: 6976854982515245115
-    second: Zavrik_Player_wall_slide_3
-  - first:
-      213: -8082716564738537539
-    second: Zavrik_Player_wall_slide_0
-  - first:
-      213: -7363363623120987177
-    second: Zavrik_Player_wall_slide_1
-  - first:
-      213: -7580013248945229613
-    second: Zavrik_Player_wall_slide_2
-  - first:
-      213: -900389942271885465
-    second: Zavrik_Player_wall_slide_3
+      213: -5391139551090536525
+    second: Zavrik_Player_slide_end_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,85 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zavrik_Player_wall_slide_0
+      name: Zavrik_Player_slide_end_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 220
-        height: 227
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+        width: 254
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db70892cb1c64df80800000000000000
-      internalID: -8082716564738537539
+      spriteID: 12073be6b926b7c60800000000000000
+      internalID: 7816949997948334113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_wall_slide_1
+      name: Zavrik_Player_slide_end_1
       rect:
         serializedVersion: 2
-        x: 220
+        x: 254
         y: 0
-        width: 220
-        height: 227
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+        width: 254
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7db17db2cc310d990800000000000000
-      internalID: -7363363623120987177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_wall_slide_2
-      rect:
-        serializedVersion: 2
-        x: 440
-        y: 0
-        width: 220
-        height: 227
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d07dd75c126ec690800000000000000
-      internalID: -7580013248945229613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_wall_slide_3
-      rect:
-        serializedVersion: 2
-        x: 660
-        y: 0
-        width: 220
-        height: 227
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76fbc833e1c2183f0800000000000000
-      internalID: -900389942271885465
+      spriteID: 3bf80ba4423de25b0800000000000000
+      internalID: -5391139551090536525
       vertices: []
       indices: 
       edges: []

@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public float flipingCd;
 
 
-    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping;
+    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, canWS = true, canFlip = true;
     public float ecoSpeed;
     [Tooltip("testes")]
     public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce;
@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
     {
         isGround = Physics2D.OverlapBox(footPosition.position + new Vector3(0, -0.03f), new Vector2(0.8f, 0.07f), 0, layerOfGround);
 
-        isEdgeL = !Physics2D.OverlapBox(transform.position + new Vector3(0.3f, -0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
-        isEdgeR = !Physics2D.OverlapBox(transform.position - new Vector3(0.3f, 0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
+        isEdgeL = !Physics2D.OverlapBox(transform.position + new Vector3(0.4f, -0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
+        isEdgeR = !Physics2D.OverlapBox(transform.position - new Vector3(0.4f, 0.28f), new Vector2(0.46f, 2.2f), 0, layerOfGround);
 
         isWallEdge = Physics2D.OverlapBox(transform.position, new Vector2(1.3f, 0.2f), 0, layerOfGround);
     }
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         else
         if (isEdgeL || isEdgeR && isGround)
         {
-            if (isEdgeL && !isEdgeR && rbPlayer.velocity.y <=0)
+            if (isEdgeL && !isEdgeR && rbPlayer.velocity.y <= 0)
             {
                 aniPlayer.SetBool("IsBalance", true);
                 GetComponentInChildren<SpriteRenderer>().flipX = false;
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         aniPlayer.SetFloat("JumpForce", rbPlayer.velocity.y);
         aniPlayer.SetBool("IsGround", isGround);
 
-        if (rbPlayer.velocity.y <= 0)
+        if (rbPlayer.velocity.y <= 0 && canWS)
         {
             WallSlideCheck();
         }
@@ -121,7 +121,6 @@ public class PlayerController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipX = false;
 
             rbPlayer.gravityScale = gravityScale / wallSlide;
-            //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
         }
         else
         if (isEdgeR && !isEdgeL && !isGround && rbPlayer.velocity.y <= 0)
@@ -130,7 +129,6 @@ public class PlayerController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipX = true;
 
             rbPlayer.gravityScale = gravityScale / wallSlide;
-            //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * Time.deltaTime);
         }
         else
         {
@@ -142,9 +140,9 @@ public class PlayerController : MonoBehaviour
     {
         // Draw a yellow cube at the transform position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position + new Vector3(0.3f, -0.28f), new Vector3(0.36f, 2.2f, 1));
+        Gizmos.DrawWireCube(transform.position + new Vector3(0.4f, -0.28f), new Vector3(0.36f, 2.2f, 1));
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position - new Vector3(0.3f, 0.28f), new Vector3(0.36f, 2.2f, 1));
+        Gizmos.DrawWireCube(transform.position - new Vector3(0.4f, 0.28f), new Vector3(0.36f, 2.2f, 1));
     }
 }

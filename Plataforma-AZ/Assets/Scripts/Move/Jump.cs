@@ -28,7 +28,7 @@ public class Jump : MonoBehaviour
         {
             jumpRequest = true;
         }
-        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd)
+        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd && PlayerController.canFlip)
         {
             wallJumpRequest = true;
         }

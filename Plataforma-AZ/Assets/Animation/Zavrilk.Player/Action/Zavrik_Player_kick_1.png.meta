@@ -1,67 +1,97 @@
 fileFormatVersion: 2
-guid: 9a161d3f750f32a4ea82fd95d15eff45
+guid: 52f503714bede3a4ab9d88218553969a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7938237041594108291
-    second: Zavrik_Player_balance_check_0
+      213: -6442663625337512625
+    second: Zavrik_Player_kick_1_0
   - first:
-      213: 6913982750299336357
-    second: Zavrik_Player_balance_check_1
+      213: -6068709988876498377
+    second: Zavrik_Player_kick_1_1
   - first:
-      213: 8958280885612508037
-    second: Zavrik_Player_balance_check_2
+      213: -4279908631462015092
+    second: Zavrik_Player_kick_1_2
   - first:
-      213: -5416539298053590996
-    second: Zavrik_Player_balance_check_3
+      213: 8155194289712929411
+    second: Zavrik_Player_kick_1_3
   - first:
-      213: 9188542240369156155
-    second: Zavrik_Player_balance_check_4
+      213: -568225954701723570
+    second: Zavrik_Player_kick_1_4
   - first:
-      213: -4106196698308908475
-    second: Zavrik_Player_balance_check_5
+      213: 8663867322737779153
+    second: Zavrik_Player_kick_1_5
   - first:
-      213: -5357715992273722979
-    second: Zavrik_Player_balance_check_6
+      213: 8159978932840923063
+    second: Zavrik_Player_kick_1_6
   - first:
-      213: -7926194003523045070
-    second: Zavrik_Player_balance_check_7
+      213: -5381269174009006231
+    second: Zavrik_Player_kick_1_7
   - first:
-      213: -7092112204720595999
-    second: Zavrik_Player_balance_check_8
+      213: 3141611809613381114
+    second: Zavrik_Player_kick_1_8
   - first:
-      213: 1113949728420691308
-    second: Zavrik_Player_balance_check_9
+      213: -9110392168200876293
+    second: Zavrik_Player_kick_1_9
   - first:
-      213: -6484276686845339214
-    second: Zavrik_Player_balance_check_10
+      213: -9218939948587889866
+    second: Zavrik_Player_kick_1_10
   - first:
-      213: 6479999347969544437
-    second: Zavrik_Player_balance_check_11
+      213: 8096151732496345725
+    second: Zavrik_Player_kick_1_11
   - first:
-      213: 8590022111106114107
-    second: Zavrik_Player_balance_check_12
+      213: -7093850897632867909
+    second: Zavrik_Player_kick_1_12
   - first:
-      213: -6764617235304986570
-    second: Zavrik_Player_balance_check_13
+      213: -1293321492438209406
+    second: Zavrik_Player_kick_1_13
   - first:
-      213: 8639299722762396231
-    second: Zavrik_Player_balance_check_14
+      213: -3897705341627309281
+    second: Zavrik_Player_kick_1_14
   - first:
-      213: -1318065264710833566
-    second: Zavrik_Player_balance_check_15
+      213: -8644418280418026002
+    second: Zavrik_Player_kick_1_15
   - first:
-      213: -3900829544205316384
-    second: Zavrik_Player_balance_check_16
+      213: -6518551781829052678
+    second: Zavrik_Player_kick_1_16
   - first:
-      213: 6046433874118770860
-    second: Zavrik_Player_balance_check_17
+      213: -2116270397147854157
+    second: Zavrik_Player_kick_1_17
   - first:
-      213: -326949783756204108
-    second: Zavrik_Player_balance_check_18
+      213: -1434755587317710338
+    second: Zavrik_Player_kick_1_18
   - first:
-      213: -4536326163859880151
-    second: Zavrik_Player_balance_check_19
+      213: 6344173385985513446
+    second: Zavrik_Player_kick_1_19
+  - first:
+      213: -1169451127601339393
+    second: Zavrik_Player_kick_1_0
+  - first:
+      213: 3530534106756592719
+    second: Zavrik_Player_kick_1_1
+  - first:
+      213: 4642129496578059169
+    second: Zavrik_Player_kick_1_2
+  - first:
+      213: -6672284392782645540
+    second: Zavrik_Player_kick_1_3
+  - first:
+      213: 5332989746989009980
+    second: Zavrik_Player_kick_1_4
+  - first:
+      213: 5838870318697737568
+    second: Zavrik_Player_kick_1_5
+  - first:
+      213: 4282237391583870927
+    second: Zavrik_Player_kick_1_6
+  - first:
+      213: 8257013140482354739
+    second: Zavrik_Player_kick_1_7
+  - first:
+      213: 270444698888134974
+    second: Zavrik_Player_kick_1_8
+  - first:
+      213: -2817707453166023979
+    second: Zavrik_Player_kick_1_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -159,421 +189,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_0
+      name: Zavrik_Player_kick_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 389801fd7884a2e60800000000000000
-      internalID: 7938237041594108291
+      spriteID: ff3642d356645cfe0800000000000000
+      internalID: -1169451127601339393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_1
+      name: Zavrik_Player_kick_1_1
       rect:
         serializedVersion: 2
-        x: 250
+        x: 203
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae25c6fda663ff50800000000000000
-      internalID: 6913982750299336357
+      spriteID: f44b0a4801afef030800000000000000
+      internalID: 3530534106756592719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_2
+      name: Zavrik_Player_kick_1_2
       rect:
         serializedVersion: 2
-        x: 500
+        x: 406
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 583fa11a005325c70800000000000000
-      internalID: 8958280885612508037
+      spriteID: 1abe5ec9e282c6040800000000000000
+      internalID: 4642129496578059169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_3
+      name: Zavrik_Player_kick_1_3
       rect:
         serializedVersion: 2
-        x: 750
+        x: 609
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20729bd43694d4b0800000000000000
-      internalID: -5416539298053590996
+      spriteID: cd6becf22b84763a0800000000000000
+      internalID: -6672284392782645540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_4
+      name: Zavrik_Player_kick_1_4
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 812
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3020e01c72448f70800000000000000
-      internalID: 9188542240369156155
+      spriteID: c3c84146be5920a40800000000000000
+      internalID: 5332989746989009980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_5
+      name: Zavrik_Player_kick_1_5
       rect:
         serializedVersion: 2
-        x: 1250
+        x: 1015
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a6a63cbdbd307c0800000000000000
-      internalID: -4106196698308908475
+      spriteID: 06dec838e95d70150800000000000000
+      internalID: 5838870318697737568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_6
+      name: Zavrik_Player_kick_1_6
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1218
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d91681101b195a5b0800000000000000
-      internalID: -5357715992273722979
+      spriteID: fcf704928309d6b30800000000000000
+      internalID: 4282237391583870927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_7
+      name: Zavrik_Player_kick_1_7
       rect:
         serializedVersion: 2
-        x: 1750
+        x: 1421
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2397d2f6c80800290800000000000000
-      internalID: -7926194003523045070
+      spriteID: 33eee2824bdc69270800000000000000
+      internalID: 8257013140482354739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_8
+      name: Zavrik_Player_kick_1_8
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1624
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb9a628681c39d90800000000000000
-      internalID: -7092112204720595999
+      spriteID: e316d905500d0c300800000000000000
+      internalID: 270444698888134974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_9
+      name: Zavrik_Player_kick_1_9
       rect:
         serializedVersion: 2
-        x: 2250
+        x: 1827
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d7824406b857f00800000000000000
-      internalID: 1113949728420691308
+      spriteID: 5da811d000e75e8d0800000000000000
+      internalID: -2817707453166023979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_10
+      name: Zavrik_Player_kick_1_10
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 2030
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b99c3f55b83306a0800000000000000
-      internalID: -6484276686845339214
+      spriteID: 63bc2c6f5febf0080800000000000000
+      internalID: -9218939948587889866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_11
+      name: Zavrik_Player_kick_1_11
       rect:
         serializedVersion: 2
-        x: 2750
+        x: 2233
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f0dc7013159de950800000000000000
-      internalID: 6479999347969544437
+      spriteID: d7aab1ffa1f4b5070800000000000000
+      internalID: 8096151732496345725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_12
+      name: Zavrik_Player_kick_1_12
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 2436
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b322b312993e53770800000000000000
-      internalID: 8590022111106114107
+      spriteID: bb9c10581349d8d90800000000000000
+      internalID: -7093850897632867909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_13
+      name: Zavrik_Player_kick_1_13
       rect:
         serializedVersion: 2
-        x: 3250
+        x: 2639
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 638492807704f12a0800000000000000
-      internalID: -6764617235304986570
+      spriteID: 28ca7d674f23d0ee0800000000000000
+      internalID: -1293321492438209406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_14
+      name: Zavrik_Player_kick_1_14
       rect:
         serializedVersion: 2
-        x: 3500
+        x: 2842
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 742226b2355f4e770800000000000000
-      internalID: 8639299722762396231
+      spriteID: f13692984a198e9c0800000000000000
+      internalID: -3897705341627309281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_15
+      name: Zavrik_Player_kick_1_15
       rect:
         serializedVersion: 2
-        x: 3750
+        x: 3045
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a212a00aa45bde0800000000000000
-      internalID: -1318065264710833566
+      spriteID: eed5ac1cf5bd80880800000000000000
+      internalID: -8644418280418026002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_16
+      name: Zavrik_Player_kick_1_16
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 3248
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ee0b4072387dd9c0800000000000000
-      internalID: -3900829544205316384
+      spriteID: af6f612f0b37985a0800000000000000
+      internalID: -6518551781829052678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_17
+      name: Zavrik_Player_kick_1_17
       rect:
         serializedVersion: 2
-        x: 4250
+        x: 3451
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca00db8b29f39e350800000000000000
-      internalID: 6046433874118770860
+      spriteID: 3bac359494f71a2e0800000000000000
+      internalID: -2116270397147854157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_18
+      name: Zavrik_Player_kick_1_18
       rect:
         serializedVersion: 2
-        x: 4500
+        x: 3654
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b712d767e0767bf0800000000000000
-      internalID: -326949783756204108
+      spriteID: ef1cb6e1569b61ce0800000000000000
+      internalID: -1434755587317710338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zavrik_Player_balance_check_19
+      name: Zavrik_Player_kick_1_19
       rect:
         serializedVersion: 2
-        x: 4750
+        x: 3857
         y: 0
-        width: 250
-        height: 291
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 203
+        height: 288
+      alignment: 9
+      pivot: {x: 0.33, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92742d1736bbb01c0800000000000000
-      internalID: -4536326163859880151
+      spriteID: 6e75729e4180b0850800000000000000
+      internalID: 6344173385985513446
       vertices: []
       indices: 
       edges: []
