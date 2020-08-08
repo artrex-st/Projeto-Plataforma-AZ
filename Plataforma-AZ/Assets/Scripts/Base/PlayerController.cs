@@ -25,9 +25,11 @@ public class PlayerController : MonoBehaviour
     [Range(0f, 10f), Tooltip("Divisor of Gravity Scale for wall Slide.")]
     public float wallSlide;
     public float flipingCd;
-
-
+    [Space(10)]
+    public float keys=0;
+    
     public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, canWS = true, canFlip = true;
+    [Space(10)]
     public float ecoSpeed;
     [Tooltip("testes")]
     public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce;
@@ -135,6 +137,10 @@ public class PlayerController : MonoBehaviour
             aniPlayer.SetBool("Wall.Slide", false);
             rbPlayer.gravityScale = gravityScale;
         }
+    }
+    public void UseKey()
+    {
+        keys--;
     }
     void OnDrawGizmosSelected()
     {
