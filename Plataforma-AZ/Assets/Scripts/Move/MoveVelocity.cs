@@ -29,28 +29,34 @@ public class MoveVelocity : MonoBehaviour, IMove
     private void FixedUpdate()
     {
         GetComponent<PlayerController>().ecoSpeed = speed;
-        if (PlayerController.isGround && !PlayerController.isIce)
+        if (PlayerController.canMove)
         {
-            NormalMove();
-            Debug.Log("normal");
-        }else
-        if (PlayerController.isGround && PlayerController.isIce)
-        {
-            IceMove();
-            Debug.Log("Ice");
+            if (PlayerController.isGround && !PlayerController.isIce)
+            {
+                NormalMove();
+                Debug.Log("normal");
+            }
+            else
+            if (PlayerController.isGround && PlayerController.isIce)
+            {
+                IceMove();
+                Debug.Log("Ice");
+            }
+            else
+            if (!PlayerController.isGround && !PlayerController.isWallEdge && !PlayerController.isFliping)
+            {
+                AirMove();
+                Debug.Log("Air");
+            }
+            else
+            if (!PlayerController.isGround && PlayerController.isFliping)
+            {
+                WallToFlip();
+                Debug.Log("Wall to Flip");
+            }
         }
         else
-        if (!PlayerController.isGround && !PlayerController.isWallEdge && !PlayerController.isFliping)
-        {
-            AirMove();
-            Debug.Log("Air");
-        }
-        else
-        if (!PlayerController.isGround && PlayerController.isFliping)
-        {
-            WallToFlip();
-            Debug.Log("Wall to Flip");
-        }
+            StopingMove();
     }
     private void NormalMove()
     {
@@ -80,7 +86,10 @@ public class MoveVelocity : MonoBehaviour, IMove
             rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
         }
         EcoMoveReset(2);
-
+    }
+    private void StopingMove() //teste
+    {
+        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
     }
     private void EcoMoveReset(float multiply)
     {

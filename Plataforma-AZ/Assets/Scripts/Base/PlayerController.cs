@@ -5,7 +5,7 @@ using ArtrexUtils;
 using Unity.Mathematics;
 using UnityEngine.SocialPlatforms;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ICombat
 {
 
     // Base States
@@ -27,8 +27,9 @@ public class PlayerController : MonoBehaviour
     public float flipingCd;
     [Space(10)]
     public float keys=0;
-    
-    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, canWS = true, canFlip = true;
+
+    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, isPunching, isKicking;
+    public static bool canWS = true, canFlip = true, canMove = true;
     [Space(10)]
     public float ecoSpeed;
     [Tooltip("testes")]
@@ -75,9 +76,13 @@ public class PlayerController : MonoBehaviour
         //animation
         aniPlayer.SetBool("IsIce",isIce);
         aniPlayer.SetBool("IsFliping", isFliping); // wall jump
-
-        aniPlayer.SetFloat("Run", math.abs(moveInX));
-        aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
+        aniPlayer.SetBool("IsPunching", isPunching); // attack (soco)
+        aniPlayer.SetBool("IsKicking", isKicking); // attack (chute)
+        if (canMove)
+        {
+            aniPlayer.SetFloat("Run", math.abs(moveInX));
+            aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
+        }
         if (rbPlayer.velocity.x > 0.01f && !isWallEdge)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
@@ -150,5 +155,15 @@ public class PlayerController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position - new Vector3(0.4f, 0.28f), new Vector3(0.36f, 2.2f, 1));
+    }
+
+    public void ApplyDmg(float dmg)
+    {
+        currHP -= dmg;
+    }
+
+    public void ApplyDmg(float dmg, string type)
+    {
+        throw new System.NotImplementedException();
     }
 }

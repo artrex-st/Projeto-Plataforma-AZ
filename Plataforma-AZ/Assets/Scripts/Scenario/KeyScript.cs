@@ -16,13 +16,7 @@ public class KeyScript : MonoBehaviour
     }
     private void Start()
     {
-        curve = new AnimationCurve(new Keyframe(0, transform.position.y), new Keyframe(0.5f, transform.position.y + 0.5f), new Keyframe(1, transform.position.y));
-        curve.preWrapMode = WrapMode.Loop;
-        curve.postWrapMode = WrapMode.Loop;
-        curve.SmoothTangents(0,0f);
-        curve.SmoothTangents(1,5f);
-        curve.SmoothTangents(2,0f);
-
+        KeyAnimation();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -35,6 +29,15 @@ public class KeyScript : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector3(transform.position.x, curve.Evaluate(Time.time), transform.position.z);
-        Debug.LogWarning(curve.Evaluate(Time.time));
+    }
+    public void KeyAnimation()
+    {
+        curve = new AnimationCurve(new Keyframe(0, transform.position.y), new Keyframe(0.5f, transform.position.y + 0.5f), new Keyframe(1, transform.position.y));
+        curve.preWrapMode = WrapMode.Loop;
+        curve.postWrapMode = WrapMode.Loop;
+        curve.SmoothTangents(0,0f);
+        curve.SmoothTangents(1,5f);
+        curve.SmoothTangents(2,0f);
+
     }
 }
