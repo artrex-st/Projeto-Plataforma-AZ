@@ -34,25 +34,25 @@ public class MoveVelocity : MonoBehaviour, IMove
             if (PlayerController.isGround && !PlayerController.isIce)
             {
                 NormalMove();
-                Debug.Log("normal");
+                //Debug.Log("normal");
             }
             else
             if (PlayerController.isGround && PlayerController.isIce)
             {
                 IceMove();
-                Debug.Log("Ice");
+                //Debug.Log("Ice");
             }
             else
             if (!PlayerController.isGround && !PlayerController.isWallEdge && !PlayerController.isFliping)
             {
                 AirMove();
-                Debug.Log("Air");
+                //Debug.Log("Air");
             }
             else
             if (!PlayerController.isGround && PlayerController.isFliping)
             {
                 WallToFlip();
-                Debug.Log("Wall to Flip");
+                //Debug.Log("Wall to Flip");
             }
         }
         else

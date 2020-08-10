@@ -83,12 +83,12 @@ public class PlayerController : MonoBehaviour, ICombat
             aniPlayer.SetFloat("Run", math.abs(moveInX));
             aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
         }
-        if (rbPlayer.velocity.x > 0.01f && !isWallEdge)
+        if (moveInX > 0.01f && !isWallEdge)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
         }
         else
-        if (rbPlayer.velocity.x < -0.01f && !isWallEdge)
+        if (moveInX < -0.01f && !isWallEdge)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
 
