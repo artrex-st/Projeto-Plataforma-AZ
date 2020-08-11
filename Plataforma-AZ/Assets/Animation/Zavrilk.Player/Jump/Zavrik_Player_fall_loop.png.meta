@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -3720397364536759786
     second: Zavrik_Player_fall_loop_1
+  - first:
+      213: 5326595711696672167
+    second: Zavrik_Player_fall_loop_0
+  - first:
+      213: 5262778636349771103
+    second: Zavrik_Player_fall_loop_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,16 +117,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 218
-        height: 293
+        height: 294
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a46fc3e446155650800000000000000
-      internalID: 6220902945417815203
+      spriteID: 7a59cc9049edbe940800000000000000
+      internalID: 5326595711696672167
       vertices: []
       indices: 
       edges: []
@@ -132,16 +138,16 @@ TextureImporter:
         x: 218
         y: 0
         width: 218
-        height: 293
+        height: 294
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61aac77fe4e7e5cc0800000000000000
-      internalID: -3720397364536759786
+      spriteID: f5d842f4945290940800000000000000
+      internalID: 5262778636349771103
       vertices: []
       indices: 
       edges: []

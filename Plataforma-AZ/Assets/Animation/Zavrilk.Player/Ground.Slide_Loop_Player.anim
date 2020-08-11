@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wall.Jump_Start_Player
+  m_Name: Ground.Slide_Loop_Player
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3029586429554880904, guid: ef1276b2ca16927408f3689f499e86ba,
+      value: {fileID: 6117889784008171693, guid: c93af6d894a2b604d9eb86753764b2b4,
         type: 3}
     - time: 0.016666668
-      value: {fileID: -3046840941188726146, guid: ef1276b2ca16927408f3689f499e86ba,
-        type: 3}
-    - time: 0.033333335
-      value: {fileID: 5635871511035895779, guid: ef1276b2ca16927408f3689f499e86ba,
+      value: {fileID: 6617463609750569224, guid: c93af6d894a2b604d9eb86753764b2b4,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -47,15 +44,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -3029586429554880904, guid: ef1276b2ca16927408f3689f499e86ba, type: 3}
-    - {fileID: -3046840941188726146, guid: ef1276b2ca16927408f3689f499e86ba, type: 3}
-    - {fileID: 5635871511035895779, guid: ef1276b2ca16927408f3689f499e86ba, type: 3}
+    - {fileID: 6117889784008171693, guid: c93af6d894a2b604d9eb86753764b2b4, type: 3}
+    - {fileID: 6617463609750569224, guid: c93af6d894a2b604d9eb86753764b2b4, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.050000004
+    m_StopTime: 0.033333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

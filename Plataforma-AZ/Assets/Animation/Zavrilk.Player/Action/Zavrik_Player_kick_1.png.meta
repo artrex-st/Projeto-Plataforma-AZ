@@ -194,10 +194,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_1
       rect:
         serializedVersion: 2
-        x: 203
+        x: 205
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_2
       rect:
         serializedVersion: 2
-        x: 406
+        x: 410
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_3
       rect:
         serializedVersion: 2
-        x: 609
+        x: 615
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_4
       rect:
         serializedVersion: 2
-        x: 812
+        x: 820
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_5
       rect:
         serializedVersion: 2
-        x: 1015
+        x: 1025
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,12 +318,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_6
       rect:
         serializedVersion: 2
-        x: 1218
+        x: 1230
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,12 +339,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_7
       rect:
         serializedVersion: 2
-        x: 1421
+        x: 1435
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,12 +360,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_8
       rect:
         serializedVersion: 2
-        x: 1624
+        x: 1640
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,12 +381,12 @@ TextureImporter:
       name: Zavrik_Player_kick_1_9
       rect:
         serializedVersion: 2
-        x: 1827
+        x: 1845
         y: 0
-        width: 203
-        height: 288
+        width: 205
+        height: 287
       alignment: 9
-      pivot: {x: 0.33, y: 0.5}
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -394,216 +394,6 @@ TextureImporter:
       bones: []
       spriteID: 5da811d000e75e8d0800000000000000
       internalID: -2817707453166023979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_10
-      rect:
-        serializedVersion: 2
-        x: 2030
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63bc2c6f5febf0080800000000000000
-      internalID: -9218939948587889866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_11
-      rect:
-        serializedVersion: 2
-        x: 2233
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7aab1ffa1f4b5070800000000000000
-      internalID: 8096151732496345725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_12
-      rect:
-        serializedVersion: 2
-        x: 2436
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb9c10581349d8d90800000000000000
-      internalID: -7093850897632867909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_13
-      rect:
-        serializedVersion: 2
-        x: 2639
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28ca7d674f23d0ee0800000000000000
-      internalID: -1293321492438209406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_14
-      rect:
-        serializedVersion: 2
-        x: 2842
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f13692984a198e9c0800000000000000
-      internalID: -3897705341627309281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_15
-      rect:
-        serializedVersion: 2
-        x: 3045
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eed5ac1cf5bd80880800000000000000
-      internalID: -8644418280418026002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_16
-      rect:
-        serializedVersion: 2
-        x: 3248
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af6f612f0b37985a0800000000000000
-      internalID: -6518551781829052678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_17
-      rect:
-        serializedVersion: 2
-        x: 3451
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bac359494f71a2e0800000000000000
-      internalID: -2116270397147854157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_18
-      rect:
-        serializedVersion: 2
-        x: 3654
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef1cb6e1569b61ce0800000000000000
-      internalID: -1434755587317710338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_kick_1_19
-      rect:
-        serializedVersion: 2
-        x: 3857
-        y: 0
-        width: 203
-        height: 288
-      alignment: 9
-      pivot: {x: 0.33, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e75729e4180b0850800000000000000
-      internalID: 6344173385985513446
       vertices: []
       indices: 
       edges: []

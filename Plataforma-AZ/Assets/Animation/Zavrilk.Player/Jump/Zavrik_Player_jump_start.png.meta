@@ -62,6 +62,12 @@ TextureImporter:
   - first:
       213: -8346022717238369492
     second: Zavrik_Player_jump_start_19
+  - first:
+      213: -4973348278128466031
+    second: Zavrik_Player_jump_start_0
+  - first:
+      213: 8138406565760853614
+    second: Zavrik_Player_jump_start_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,16 +171,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 205
-        height: 284
+        height: 294
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2398425d881bdff10800000000000000
-      internalID: 2305193785533172018
+      spriteID: 1972ad9471e1bfab0800000000000000
+      internalID: -4973348278128466031
       vertices: []
       indices: 
       edges: []
@@ -186,16 +192,58 @@ TextureImporter:
         x: 205
         y: 0
         width: 205
-        height: 284
+        height: 294
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97971b82fe331e7c0800000000000000
-      internalID: -4043893888129074823
+      spriteID: e66e1e507ad61f070800000000000000
+      internalID: 8138406565760853614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_jump_start_2
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 205
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3cbc8f6435f9960800000000000000
+      internalID: 7610893459566347204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_jump_start_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 0
+        width: 205
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d05db67089f44220800000000000000
+      internalID: 2469372825849123028
       vertices: []
       indices: 
       edges: []

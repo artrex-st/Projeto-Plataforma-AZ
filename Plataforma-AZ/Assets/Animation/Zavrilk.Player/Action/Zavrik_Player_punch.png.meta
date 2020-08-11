@@ -32,6 +32,45 @@ TextureImporter:
   - first:
       213: 7060336190204687402
     second: Zavrik_Player_punch_9
+  - first:
+      213: 3103350915905415870
+    second: Zavrik_Player_punch_0
+  - first:
+      213: 7248569512790910744
+    second: Zavrik_Player_punch_1
+  - first:
+      213: 3075364917535105941
+    second: Zavrik_Player_punch_2
+  - first:
+      213: 7849023330888249757
+    second: Zavrik_Player_punch_3
+  - first:
+      213: -1654725612349876755
+    second: Zavrik_Player_punch_4
+  - first:
+      213: -4143784468765295608
+    second: Zavrik_Player_punch_5
+  - first:
+      213: 8948299705843107336
+    second: Zavrik_Player_punch_6
+  - first:
+      213: -7738445823609571086
+    second: Zavrik_Player_punch_7
+  - first:
+      213: 2291826197233684477
+    second: Zavrik_Player_punch_8
+  - first:
+      213: 8916551952089755027
+    second: Zavrik_Player_punch_9
+  - first:
+      213: 3889417360504064053
+    second: Zavrik_Player_punch_10
+  - first:
+      213: -8061411547133365403
+    second: Zavrik_Player_punch_11
+  - first:
+      213: 6425243834791007232
+    second: Zavrik_Player_punch_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,17 +173,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eecf01f916116aa40800000000000000
-      internalID: 5379005915918826734
+      spriteID: ebaeceb3731511b20800000000000000
+      internalID: 3103350915905415870
       vertices: []
       indices: 
       edges: []
@@ -153,19 +192,19 @@ TextureImporter:
       name: Zavrik_Player_punch_1
       rect:
         serializedVersion: 2
-        x: 379
+        x: 380
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af886117a72e408b0800000000000000
-      internalID: -5186771855312779014
+      spriteID: 817e0ab3197189460800000000000000
+      internalID: 7248569512790910744
       vertices: []
       indices: 
       edges: []
@@ -174,19 +213,19 @@ TextureImporter:
       name: Zavrik_Player_punch_2
       rect:
         serializedVersion: 2
-        x: 758
+        x: 760
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b812e42ae5c0400800000000000000
-      internalID: 291712127060773685
+      spriteID: 593e0683914edaa20800000000000000
+      internalID: 3075364917535105941
       vertices: []
       indices: 
       edges: []
@@ -195,19 +234,19 @@ TextureImporter:
       name: Zavrik_Player_punch_3
       rect:
         serializedVersion: 2
-        x: 1137
+        x: 1140
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf7929cb261bc15f0800000000000000
-      internalID: -784557197440673796
+      spriteID: d91f85f22255dec60800000000000000
+      internalID: 7849023330888249757
       vertices: []
       indices: 
       edges: []
@@ -216,19 +255,19 @@ TextureImporter:
       name: Zavrik_Player_punch_4
       rect:
         serializedVersion: 2
-        x: 1516
+        x: 1520
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9437c4f531845abe0800000000000000
-      internalID: -1466686855598804151
+      spriteID: de5152b92db3909e0800000000000000
+      internalID: -1654725612349876755
       vertices: []
       indices: 
       edges: []
@@ -237,19 +276,19 @@ TextureImporter:
       name: Zavrik_Player_punch_5
       rect:
         serializedVersion: 2
-        x: 1895
+        x: 1900
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbc7e4273cc12fd60800000000000000
-      internalID: 7922426320260070591
+      spriteID: 80cb679faf15e76c0800000000000000
+      internalID: -4143784468765295608
       vertices: []
       indices: 
       edges: []
@@ -258,19 +297,19 @@ TextureImporter:
       name: Zavrik_Player_punch_6
       rect:
         serializedVersion: 2
-        x: 2274
+        x: 2280
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de735b206ab17520800000000000000
-      internalID: 2698142573978156758
+      spriteID: 806c28e1c2fbe2c70800000000000000
+      internalID: 8948299705843107336
       vertices: []
       indices: 
       edges: []
@@ -279,19 +318,19 @@ TextureImporter:
       name: Zavrik_Player_punch_7
       rect:
         serializedVersion: 2
-        x: 2653
+        x: 2660
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e78d76b962480150800000000000000
-      internalID: 5838989938686527460
+      spriteID: 2f8752206848b9490800000000000000
+      internalID: -7738445823609571086
       vertices: []
       indices: 
       edges: []
@@ -300,19 +339,19 @@ TextureImporter:
       name: Zavrik_Player_punch_8
       rect:
         serializedVersion: 2
-        x: 3032
+        x: 3040
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0eba53355f892420800000000000000
-      internalID: 2605771455507119627
+      spriteID: dff4c05a8c33ecf10800000000000000
+      internalID: 2291826197233684477
       vertices: []
       indices: 
       edges: []
@@ -321,19 +360,82 @@ TextureImporter:
       name: Zavrik_Player_punch_9
       rect:
         serializedVersion: 2
-        x: 3411
+        x: 3420
         y: 0
-        width: 379
-        height: 289
+        width: 380
+        height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a243cf39b5a5bf160800000000000000
-      internalID: 7060336190204687402
+      spriteID: 39d20ad22c4fdbb70800000000000000
+      internalID: 8916551952089755027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_punch_10
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 0
+        width: 380
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538051c7b7cf9f530800000000000000
+      internalID: 3889417360504064053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_punch_11
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 0
+        width: 380
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56332e8b8ec102090800000000000000
+      internalID: -8061411547133365403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_punch_12
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 0
+        width: 380
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0049cffa93d0b2950800000000000000
+      internalID: 6425243834791007232
       vertices: []
       indices: 
       edges: []

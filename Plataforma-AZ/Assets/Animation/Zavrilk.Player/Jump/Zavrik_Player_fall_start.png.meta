@@ -11,6 +11,66 @@ TextureImporter:
   - first:
       213: -7916654655173154729
     second: Zavrik_Player_fall_start_2
+  - first:
+      213: 3620327684199119940
+    second: Zavrik_Player_fall_start_0
+  - first:
+      213: 1086530359666046405
+    second: Zavrik_Player_fall_start_1
+  - first:
+      213: 7311859570510260276
+    second: Zavrik_Player_fall_start_2
+  - first:
+      213: -440339008315913678
+    second: Zavrik_Player_fall_start_3
+  - first:
+      213: -5253000989304933847
+    second: Zavrik_Player_fall_start_4
+  - first:
+      213: -7955292692433359569
+    second: Zavrik_Player_fall_start_5
+  - first:
+      213: 4754344635886689703
+    second: Zavrik_Player_fall_start_6
+  - first:
+      213: 2499682385978381062
+    second: Zavrik_Player_fall_start_7
+  - first:
+      213: 2127711618278673589
+    second: Zavrik_Player_fall_start_8
+  - first:
+      213: -6743677905848459415
+    second: Zavrik_Player_fall_start_9
+  - first:
+      213: 2925419251162391591
+    second: Zavrik_Player_fall_start_10
+  - first:
+      213: 8501436581083264251
+    second: Zavrik_Player_fall_start_11
+  - first:
+      213: 1792797487175310296
+    second: Zavrik_Player_fall_start_12
+  - first:
+      213: -7879642315314979584
+    second: Zavrik_Player_fall_start_13
+  - first:
+      213: -1593339395545529936
+    second: Zavrik_Player_fall_start_14
+  - first:
+      213: -8140583569083192308
+    second: Zavrik_Player_fall_start_15
+  - first:
+      213: -618301795532952405
+    second: Zavrik_Player_fall_start_16
+  - first:
+      213: -5267122399241720249
+    second: Zavrik_Player_fall_start_17
+  - first:
+      213: 9189886806232262793
+    second: Zavrik_Player_fall_start_18
+  - first:
+      213: 8030482201450656461
+    second: Zavrik_Player_fall_start_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,17 +173,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 229
-        height: 291
+        width: 230
+        height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d6f79b1a6421c370800000000000000
-      internalID: 8340988023014946514
+      spriteID: 44c7333f8dcfd3230800000000000000
+      internalID: 3620327684199119940
       vertices: []
       indices: 
       edges: []
@@ -132,19 +192,19 @@ TextureImporter:
       name: Zavrik_Player_fall_start_1
       rect:
         serializedVersion: 2
-        x: 229
+        x: 230
         y: 0
-        width: 229
-        height: 291
+        width: 230
+        height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cc752b192d9b5d90800000000000000
-      internalID: -7107914786999534392
+      spriteID: 5c5729dfa91241f00800000000000000
+      internalID: 1086530359666046405
       vertices: []
       indices: 
       edges: []
@@ -153,19 +213,19 @@ TextureImporter:
       name: Zavrik_Player_fall_start_2
       rect:
         serializedVersion: 2
-        x: 458
+        x: 460
         y: 0
-        width: 229
-        height: 291
+        width: 230
+        height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75826fc0984622290800000000000000
-      internalID: -7916654655173154729
+      spriteID: 438edcb1a81f87560800000000000000
+      internalID: 7311859570510260276
       vertices: []
       indices: 
       edges: []

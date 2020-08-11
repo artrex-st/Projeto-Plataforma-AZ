@@ -62,6 +62,36 @@ TextureImporter:
   - first:
       213: 1735391224286932666
     second: Zavrik_Player_kick_9
+  - first:
+      213: -6726589415835854554
+    second: Zavrik_Player_kick_10
+  - first:
+      213: -8059557392337283197
+    second: Zavrik_Player_kick_11
+  - first:
+      213: -8730558691576217197
+    second: Zavrik_Player_kick_12
+  - first:
+      213: -8596590395825680886
+    second: Zavrik_Player_kick_13
+  - first:
+      213: 4865076836673832424
+    second: Zavrik_Player_kick_14
+  - first:
+      213: -6071004289789038892
+    second: Zavrik_Player_kick_15
+  - first:
+      213: -9038498695066739460
+    second: Zavrik_Player_kick_16
+  - first:
+      213: 2137855209291329382
+    second: Zavrik_Player_kick_17
+  - first:
+      213: -6866024546304505173
+    second: Zavrik_Player_kick_18
+  - first:
+      213: -4023632108879996698
+    second: Zavrik_Player_kick_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -164,8 +194,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +213,10 @@ TextureImporter:
       name: Zavrik_Player_kick_1
       rect:
         serializedVersion: 2
-        x: 219
+        x: 224
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +234,10 @@ TextureImporter:
       name: Zavrik_Player_kick_2
       rect:
         serializedVersion: 2
-        x: 438
+        x: 448
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +255,10 @@ TextureImporter:
       name: Zavrik_Player_kick_3
       rect:
         serializedVersion: 2
-        x: 657
+        x: 672
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +276,10 @@ TextureImporter:
       name: Zavrik_Player_kick_4
       rect:
         serializedVersion: 2
-        x: 876
+        x: 896
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +297,10 @@ TextureImporter:
       name: Zavrik_Player_kick_5
       rect:
         serializedVersion: 2
-        x: 1095
+        x: 1120
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +318,10 @@ TextureImporter:
       name: Zavrik_Player_kick_6
       rect:
         serializedVersion: 2
-        x: 1314
+        x: 1344
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +339,10 @@ TextureImporter:
       name: Zavrik_Player_kick_7
       rect:
         serializedVersion: 2
-        x: 1533
+        x: 1568
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +360,10 @@ TextureImporter:
       name: Zavrik_Player_kick_8
       rect:
         serializedVersion: 2
-        x: 1752
+        x: 1792
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +381,10 @@ TextureImporter:
       name: Zavrik_Player_kick_9
       rect:
         serializedVersion: 2
-        x: 1971
+        x: 2016
         y: 0
-        width: 219
-        height: 285
+        width: 224
+        height: 288
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

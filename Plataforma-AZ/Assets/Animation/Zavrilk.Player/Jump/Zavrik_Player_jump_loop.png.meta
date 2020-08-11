@@ -62,6 +62,12 @@ TextureImporter:
   - first:
       213: 8435817118624378939
     second: Zavrik_Player_jump_loop_19
+  - first:
+      213: 6565545976611032777
+    second: Zavrik_Player_jump_loop_0
+  - first:
+      213: -6562950062751943266
+    second: Zavrik_Player_jump_loop_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -165,16 +171,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 207
-        height: 264
+        height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d011589573eb0e20800000000000000
-      internalID: 3317995644694630610
+      spriteID: 9ce456ca7418d1b50800000000000000
+      internalID: 6565545976611032777
       vertices: []
       indices: 
       edges: []
@@ -186,37 +192,16 @@ TextureImporter:
         x: 207
         y: 0
         width: 207
-        height: 264
+        height: 265
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01ea998741720fa90800000000000000
-      internalID: -7282277628581925360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Zavrik_Player_jump_loop_2
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 0
-        width: 207
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c235464994976d3c0800000000000000
-      internalID: -4335144234368347348
+      spriteID: e95fa0f90b7bbe4a0800000000000000
+      internalID: -6562950062751943266
       vertices: []
       indices: 
       edges: []

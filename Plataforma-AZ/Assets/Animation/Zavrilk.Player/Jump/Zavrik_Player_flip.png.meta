@@ -23,6 +23,66 @@ TextureImporter:
   - first:
       213: 1564696939767944705
     second: Zavrik_Player_flip_6
+  - first:
+      213: 6466236433712960380
+    second: Zavrik_Player_flip_0
+  - first:
+      213: -4474633031907603352
+    second: Zavrik_Player_flip_1
+  - first:
+      213: -429839855781265033
+    second: Zavrik_Player_flip_2
+  - first:
+      213: -1099986093233547271
+    second: Zavrik_Player_flip_3
+  - first:
+      213: 4412922122906880104
+    second: Zavrik_Player_flip_4
+  - first:
+      213: -1670557504596808122
+    second: Zavrik_Player_flip_5
+  - first:
+      213: -6186849053703637621
+    second: Zavrik_Player_flip_6
+  - first:
+      213: -3249726403374361811
+    second: Zavrik_Player_flip_7
+  - first:
+      213: -2361962702486212942
+    second: Zavrik_Player_flip_8
+  - first:
+      213: 6932494720118679098
+    second: Zavrik_Player_flip_9
+  - first:
+      213: 7472200819827574598
+    second: Zavrik_Player_flip_10
+  - first:
+      213: 7448313194044810734
+    second: Zavrik_Player_flip_11
+  - first:
+      213: -608509081605765665
+    second: Zavrik_Player_flip_12
+  - first:
+      213: -7112183922185695007
+    second: Zavrik_Player_flip_13
+  - first:
+      213: -4572723391541938173
+    second: Zavrik_Player_flip_14
+  - first:
+      213: 6935066959582404437
+    second: Zavrik_Player_flip_15
+  - first:
+      213: 5045642308716494703
+    second: Zavrik_Player_flip_16
+  - first:
+      213: 4999025579206659871
+    second: Zavrik_Player_flip_17
+  - first:
+      213: 6128438183240901061
+    second: Zavrik_Player_flip_18
+  - first:
+      213: 7169474597715918999
+    second: Zavrik_Player_flip_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,17 +185,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2506b398b45cfb2c0800000000000000
-      internalID: -4413592181584207790
+      spriteID: c735621e6cfacb950800000000000000
+      internalID: 6466236433712960380
       vertices: []
       indices: 
       edges: []
@@ -144,19 +204,19 @@ TextureImporter:
       name: Zavrik_Player_flip_1
       rect:
         serializedVersion: 2
-        x: 485
+        x: 493
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be896095509a0d690800000000000000
-      internalID: -7579372332431009557
+      spriteID: 86c0be017f8e6e1c0800000000000000
+      internalID: -4474633031907603352
       vertices: []
       indices: 
       edges: []
@@ -165,19 +225,19 @@ TextureImporter:
       name: Zavrik_Player_flip_2
       rect:
         serializedVersion: 2
-        x: 970
+        x: 986
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f0e6e50507682e90800000000000000
-      internalID: -7050271945376997131
+      spriteID: 7714ad5bde6e80af0800000000000000
+      internalID: -429839855781265033
       vertices: []
       indices: 
       edges: []
@@ -186,19 +246,19 @@ TextureImporter:
       name: Zavrik_Player_flip_3
       rect:
         serializedVersion: 2
-        x: 1455
+        x: 1479
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57743fbcd527af7a0800000000000000
-      internalID: -6342631378018678923
+      spriteID: 9f7d1f6e9701cb0f0800000000000000
+      internalID: -1099986093233547271
       vertices: []
       indices: 
       edges: []
@@ -207,19 +267,19 @@ TextureImporter:
       name: Zavrik_Player_flip_4
       rect:
         serializedVersion: 2
-        x: 1940
+        x: 1972
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1828e19512723b00800000000000000
-      internalID: 806832720220530719
+      spriteID: 868c3554a49dd3d30800000000000000
+      internalID: 4412922122906880104
       vertices: []
       indices: 
       edges: []
@@ -228,19 +288,19 @@ TextureImporter:
       name: Zavrik_Player_flip_5
       rect:
         serializedVersion: 2
-        x: 2425
+        x: 2465
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91407e5596be0dcf0800000000000000
-      internalID: -229424743350598631
+      spriteID: 64ee4a1fcccf0d8e0800000000000000
+      internalID: -1670557504596808122
       vertices: []
       indices: 
       edges: []
@@ -249,19 +309,82 @@ TextureImporter:
       name: Zavrik_Player_flip_6
       rect:
         serializedVersion: 2
-        x: 2910
+        x: 2958
         y: 0
-        width: 485
-        height: 449
+        width: 493
+        height: 453
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 106520c939be6b510800000000000000
-      internalID: 1564696939767944705
+      spriteID: b857803a095e32aa0800000000000000
+      internalID: -6186849053703637621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_flip_7
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 0
+        width: 493
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23d9adcd07a6e2d0800000000000000
+      internalID: -3249726403374361811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_flip_8
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 0
+        width: 493
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be6691bf6f983fd0800000000000000
+      internalID: -2361962702486212942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zavrik_Player_flip_9
+      rect:
+        serializedVersion: 2
+        x: 4437
+        y: 0
+        width: 493
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36e1ffc73b253060800000000000000
+      internalID: 6932494720118679098
       vertices: []
       indices: 
       edges: []
