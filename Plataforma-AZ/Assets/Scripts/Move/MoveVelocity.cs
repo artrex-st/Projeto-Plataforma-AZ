@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ArtrexUtils;
+using System;
+using Unity.Mathematics;
 
 //requerimentos minimos
 //Minimun Requirements
@@ -9,13 +11,15 @@ using ArtrexUtils;
 
 public class MoveVelocity : MonoBehaviour, IMove
 {
-    private Vector2 velocityVector;
+    private Vector2 axisVector;
     private Rigidbody2D rb2D;
     [SerializeField]
-    private float speed;
+    private float speed, groundSlideTimer;
+    [SerializeField]
+    private Boolean downRequest;
     //private Character_Base characterBase;
 
-    private void Awake()
+    private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         //characterBase = GetComponent<Character_Base>();
@@ -23,9 +27,19 @@ public class MoveVelocity : MonoBehaviour, IMove
 
     public void SetVelocity(Vector2 velocityVector)
     {
-        this.velocityVector = velocityVector;
+        this.axisVector = velocityVector;
     }
-
+    public void Update()
+    {
+        if (axisVector.y <= -0.1 && !downRequest && math.abs(axisVector.x) >= 0.05f)
+        {
+            downRequest = true;
+        }else
+        if (axisVector.y >= 0 && !PlayerController.isFliping)
+        {
+            downRequest = false;
+        }
+    }
     private void FixedUpdate()
     {
         GetComponent<PlayerController>().ecoSpeed = speed;
@@ -60,33 +74,73 @@ public class MoveVelocity : MonoBehaviour, IMove
     }
     private void NormalMove()
     {
-        rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
-    }
-    private void AirMove()
-    {
-        //speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
-        rb2D.velocity = new Vector2(GetComponent<PlayerController>().speed * velocityVector.x / 2, rb2D.velocity.y);
-        EcoMoveReset(8);
-    }
-    private void WallToFlip()
-    {
-        rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed * 1.5f, rb2D.velocity.y);
-        EcoMoveReset(8);
+        if (!downRequest)
+        {
+            rb2D.velocity = new Vector2(axisVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
+            PlayerController.isGroundSlide = false;
+        }else
+        if (downRequest)
+        {
+            GroundSliding();
+        }
     }
     private void IceMove() //teste
     {
         if (PlayerController.isWallEdge)
         {
-            rb2D.velocity = new Vector2(velocityVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
+            rb2D.velocity = new Vector2(axisVector.x * GetComponent<PlayerController>().speed, rb2D.velocity.y);
             speed = 0;
         }
         else
         {
-            speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
-            rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
+            if (!downRequest)
+            {
+                speed = Mathf.Clamp(axisVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
+                rb2D.velocity = new Vector2(speed, rb2D.velocity.y);
+                PlayerController.isGroundSlide = false;
+            }
+            else
+            if (downRequest)
+            {
+                GroundIceSliding();
+            }
         }
         EcoMoveReset(2);
     }
+    private void AirMove()
+    {
+        //speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
+        rb2D.velocity = new Vector2(GetComponent<PlayerController>().speed * axisVector.x / 2, rb2D.velocity.y);
+        EcoMoveReset(8);
+    }
+    private void WallToFlip()
+    {
+        rb2D.velocity = new Vector2(axisVector.x * GetComponent<PlayerController>().speed * 1.5f, rb2D.velocity.y);
+        EcoMoveReset(8);
+    }
+
+    // ground slidings
+    private void GroundSliding() //teste
+    {
+        Debug.Log($"Down request:{downRequest}");
+        rb2D.velocity = new Vector2(rb2D.velocity.x > 0 ? rb2D.velocity.x - groundSlideTimer : rb2D.velocity.x + groundSlideTimer, rb2D.velocity.y);
+        PlayerController.isGroundSlide = true;
+        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f)
+        {
+            PlayerController.isGroundSlide = false;
+        }
+    }
+    private void GroundIceSliding() //teste
+    {
+        Debug.Log($"Down request:{downRequest}");
+        rb2D.velocity = new Vector2(speed > 0 ? speed - groundSlideTimer : speed + groundSlideTimer, rb2D.velocity.y);
+        PlayerController.isGroundSlide = true;
+        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f)
+        {
+            PlayerController.isGroundSlide = false;
+        }
+    }
+    // ground end
     private void StopingMove() //teste
     {
         rb2D.velocity = new Vector2(0, rb2D.velocity.y);

@@ -7,7 +7,7 @@ public class Jump : MonoBehaviour
     [SerializeField]
     private Transform footPosition;
     private LayerMask layerOfGround;
-    private Boolean jumpWithTime = false,jumpRequest = false, wallJumpRequest= false;
+    private Boolean jumpGravity = false,jumpRequest = false, wallJumpRequest= false;
     [SerializeField]
     private float jumpForce, flipingCd, flipingTime;
 
@@ -27,10 +27,12 @@ public class Jump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
         {
             jumpRequest = true;
+            PlayerController.isGroundSlide = false;
         }
         if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd && PlayerController.canFlip)
         {
             wallJumpRequest = true;
+            PlayerController.isGroundSlide = false;
         }
     }
     //private void OnDrawGizmos()

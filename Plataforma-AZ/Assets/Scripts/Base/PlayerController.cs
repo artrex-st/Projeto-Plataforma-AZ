@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour, ICombat
     [Range(0f, 50f), Tooltip("Speed of player will moved.")]
     public float speed = 10;
     [Range(-30f, 30f), Tooltip("Axis of movement direction.")]
-    public float moveInX;
+    public float moveInX, moveInY;
     // Status of Features
     [Space(10), Range(0f, 50f), Tooltip("The more jumpforce it has, more higher and faster it will go.")]
     public float jumpForce = 20;
@@ -28,12 +28,12 @@ public class PlayerController : MonoBehaviour, ICombat
     [Space(10)]
     public float keys=0;
 
-    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, isPunching, isKicking;
+    public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, isPunching, isKicking, isGroundSlide;
     public static bool canWS = true, canFlip = true, canMove = true;
     [Space(10)]
     public float ecoSpeed;
     [Tooltip("testes")]
-    public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce;
+    public bool visEdgeR, visEdgeL, visWallEdge, visGround, visIce, visGroundSlide;
     public Transform footPosition;
     public LayerMask layerOfGround;
     public Rigidbody2D rbPlayer;
@@ -55,8 +55,10 @@ public class PlayerController : MonoBehaviour, ICombat
         visWallEdge = isWallEdge;
         visGround = isGround;
         isIce = visIce;
+        visGroundSlide = isGroundSlide;
         rbPlayer.gravityScale = gravityScale;
         moveInX = Input.GetAxis("Horizontal");
+        moveInY = Input.GetAxis("Vertical");
         EdgeCheck();
         AnimationsCheck();
 
@@ -75,20 +77,26 @@ public class PlayerController : MonoBehaviour, ICombat
     {
         //animation
         aniPlayer.SetBool("IsIce",isIce);
+        aniPlayer.SetBool("IsGroundSlide", isGroundSlide);
         aniPlayer.SetBool("IsFliping", isFliping); // wall jump
         aniPlayer.SetBool("IsPunching", isPunching); // attack (soco)
         aniPlayer.SetBool("IsKicking", isKicking); // attack (chute)
         if (canMove)
         {
-            aniPlayer.SetFloat("Run", math.abs(moveInX));
+            if (math.abs(rbPlayer.velocity.x) >= 0.1f)
+            {
+                aniPlayer.SetFloat("Run", math.abs(moveInX));
+            }else
+                aniPlayer.SetFloat("Run", 0);
+
             aniPlayer.SetFloat("SpeedX", math.abs(ecoSpeed));
         }
-        if (moveInX > 0.01f && !isWallEdge)
+        if (moveInX > 0.01f && !isWallEdge && !isGroundSlide)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = false; //correndo para direita;
         }
         else
-        if (moveInX < -0.01f && !isWallEdge)
+        if (moveInX < -0.01f && !isWallEdge && !isGroundSlide)
         {
             GetComponentInChildren<SpriteRenderer>().flipX = true;
 

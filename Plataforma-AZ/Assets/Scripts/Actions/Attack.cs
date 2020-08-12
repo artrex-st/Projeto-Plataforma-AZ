@@ -21,12 +21,12 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && PlayerController.isGround && cdAttack >= attackTime)
+        if (Input.GetButton("Fire1") && PlayerController.isGround && cdAttack >= attackTime && !PlayerController.isGroundSlide)
         {
             StartCoroutine(Punch());
             cdAttack = 0;
         }
-        if (Input.GetButton("Fire3") && PlayerController.isGround && cdAttack >= attackTime)
+        if (Input.GetButton("Fire3") && PlayerController.isGround && cdAttack >= attackTime && !PlayerController.isGroundSlide)
         {
             StartCoroutine(Kick());
             cdAttack = 0;
