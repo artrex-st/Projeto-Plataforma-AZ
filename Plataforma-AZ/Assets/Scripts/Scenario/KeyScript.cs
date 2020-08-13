@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
-using UnityEditor.UIElements;
-using UnityEngine;
+﻿using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 
 public class KeyScript : MonoBehaviour
 {
-    public string key = "Key";
     [SerializeField]
     private AnimationCurve curve;
     private void Awake()
     {
-        transform.tag = key;
+        transform.tag = "Key";
     }
     private void Start()
     {
