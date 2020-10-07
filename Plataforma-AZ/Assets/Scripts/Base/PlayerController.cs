@@ -27,9 +27,11 @@ public class PlayerController : MonoBehaviour, ICombat
     public float flipingCd;
     [Space(10)]
     public float keys=0;
+    public float stumTime;
 
     public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, isPunching, isKicking, isGroundSlide;
     public static bool canWS = true, canFlip = true, canMove = true;
+    public bool stun;
     [Space(10)]
     public float ecoSpeed;
     [Tooltip("testes")]
@@ -61,9 +63,18 @@ public class PlayerController : MonoBehaviour, ICombat
         moveInY = Input.GetAxis("Vertical");
         EdgeCheck();
         AnimationsCheck();
+        canMove = !stun;
+        if (stun)
+        {
+            StartCoroutine(EndStum());
+        }
 
     }
-
+    IEnumerator EndStum()
+    {
+        yield return new WaitForSecondsRealtime(stumTime);
+        stun = false;
+    }
     private void EdgeCheck()
     {
         isGround = Physics2D.OverlapBox(footPosition.position + new Vector3(0, -0.03f), new Vector2(0.8f, 0.07f), 0, layerOfGround);

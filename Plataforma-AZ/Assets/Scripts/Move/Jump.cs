@@ -24,15 +24,18 @@ public class Jump : MonoBehaviour
         //teste
         Start();
         //
-        if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
+        if (!gameObject.GetComponent<PlayerController>().stun)
         {
-            jumpRequest = true;
-            PlayerController.isGroundSlide = false;
-        }
-        if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd && PlayerController.canFlip)
-        {
-            wallJumpRequest = true;
-            PlayerController.isGroundSlide = false;
+            if (Input.GetButtonDown("Jump") && Check.FGrounded(footPosition, layerOfGround))
+            {
+                jumpRequest = true;
+                PlayerController.isGroundSlide = false;
+            }
+            if (Input.GetButtonDown("Jump") && !PlayerController.isGround && PlayerController.isWallEdge && flipingTime >= flipingCd && PlayerController.canFlip)
+            {
+                wallJumpRequest = true;
+                PlayerController.isGroundSlide = false;
+            }
         }
     }
     //private void OnDrawGizmos()
