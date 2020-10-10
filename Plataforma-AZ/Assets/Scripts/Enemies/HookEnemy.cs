@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class HookEnemy : MonoBehaviour, ICombat
 {
+    // teste
+    public bool test;
+    //
     #region Variables
     public bool testeState;
-    public enum States { Idle, Patrol, Attack1, Attack2, HookStart, HookEnd, HookBack, Hurt };
+    public enum States { Idle, Patrol, Attack1, Attack2, HookStart, HookEnd, HookBack, Hurt, TargetLock, LostTarget};
     public States state = States.Idle;
     public States preState;
     public string stateName;
@@ -15,6 +18,8 @@ public class HookEnemy : MonoBehaviour, ICombat
     [Space(10), Header("Status")]
     public float maxHp;
     public float currHp;
+    public float speed;
+    public int currentPatrolPoint;
     [Header("Damage of skills")]
     public float attack1Dmg;
     public float attack2Dmg;
@@ -25,18 +30,28 @@ public class HookEnemy : MonoBehaviour, ICombat
     public float hookTimeBack = 1;
     public float attack1Time = 1;
     public float attack2Time = 2;
+    public float resumePatrolTime = 2;
     [Space(10), Header("Ranges")]
     public float hookRange;
+    public float maxEngageRange;
+    public float maxDetectRange;
 
     [Space(5)]
     public bool changeState = false;
     [Header("Componentes")]
-    public PlayerController player;
+    public GameObject playerObj;
     public GameObject firePoint;
     public GameObject hookPrefab;
     public GameObject hookPrefabActive;
     public LineRenderer rayRender;
     public SpringJoint2D hookPull;
+    public Transform currentTarget;
+    public Transform preTarget;
+    public Transform[] patrolPoint;
+    public Rigidbody2D enemyBody;
+    public LayerMask layerTarget;
+
+
 
     #endregion
     public void ApplyDmg(float dmg)
@@ -53,6 +68,9 @@ public class HookEnemy : MonoBehaviour, ICombat
     {
         currHp = maxHp;
         SwithCaseStateName();
+        enemyBody = GetComponent<Rigidbody2D>();
+        currentTarget = patrolPoint[currentPatrolPoint];
+        playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -60,12 +78,13 @@ public class HookEnemy : MonoBehaviour, ICombat
     {
         if (testeState)
         {
-            SetState(States.HookStart);
+            SetState(States.Patrol);
             changeState = true;
             testeState = false;
         }
         //TesteSwithCase();
         Invoke(stateName, 0);
+        //test = patrolPoint[0].position;
         //PlayState();
     }
 
@@ -92,6 +111,9 @@ public class HookEnemy : MonoBehaviour, ICombat
             case States.HookEnd:
                 stateName = "HookEnd";
                 break;
+            case States.Hurt: // criar as funçoes
+                stateName = "Hurt";
+                break;
         }
     }
     // fim
@@ -114,14 +136,53 @@ public class HookEnemy : MonoBehaviour, ICombat
     private void IdleState()
     {
         Debug.Log("Idle");
+        TargetUpdate();
+        StartCoroutine(StartPatrol());
+    }
+    public IEnumerator StartPatrol()
+    {
+        yield return new WaitForSecondsRealtime(resumePatrolTime);
+        changeState = true;
+        SetState(States.Patrol);
     }
 
     private void Patrol()
     {
-        Debug.Log("Patrol");
+
+        ScanArea();
+        if (Vector2.Distance(transform.position, currentTarget.position) > maxEngageRange)
+        {
+            Move(currentTarget); // a mudança de target ainda nao funciona o target
+        }else
+        {
+            TargetUpdate();
+        }
+    }
+    private void TargetUpdate()
+    {
+        //test = Physics2D.Raycast(transform.position, Vector2.right, maxDetectRange, layerTarget);
+        
+
+        if (state.Equals(States.Patrol))
+        {
+            currentTarget = patrolPoint[currentPatrolPoint];
+            if (currentPatrolPoint >= patrolPoint.Length - 1)
+            {
+                currentPatrolPoint = 0;
+            }
+            else
+                currentPatrolPoint++;
+        }
+        else if (state.Equals(States.Idle))
+            currentTarget = patrolPoint[currentPatrolPoint];
+        else
+            currentTarget = playerObj.transform;
 
     }
-
+    private void Move(Transform target)
+    {
+        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(target.position.x, transform.position.y), speed * Time.deltaTime);   
+    }
     private void Attack1()
     {
         Debug.Log("Ataack 1");
@@ -187,7 +248,31 @@ public class HookEnemy : MonoBehaviour, ICombat
         Debug.LogWarning($"Hook Change: {States.HookEnd} to {States.Attack1}");
         SetState(States.Attack1);
     }
+    public void Hurt()
+    {
 
+    }
+    public void ScanArea()
+    {
+        RaycastHit2D[] hitScan = Physics2D.RaycastAll(firePoint.transform.position, Vector2.right, maxDetectRange);
+        foreach (RaycastHit2D target in hitScan)
+        {
+            if (target.transform.CompareTag("Player"))
+            {
+                changeState = true;
+                SetState(States.HookStart);
+                //Debug.LogWarning("Melee Enemy Hit in:" + enemy.name);
+                //enemy.GetComponent<Rigidbody2D>().AddForce(GetComponentInChildren<SpriteRenderer>().flipX ? new Vector2(-dmg, dmg) : new Vector2(dmg, dmg) * 2, ForceMode2D.Impulse);
+            }
+            else if (!state.Equals(States.Idle))
+            {
+                changeState = true;
+                SetState(States.Idle);
+            }
+
+            Debug.Log("Scan found:" + target.transform.name);
+        }
+    }
     #endregion
     private void SetLindeRender()
     {
@@ -209,8 +294,10 @@ public class HookEnemy : MonoBehaviour, ICombat
         //Gizmos.color = Color.red;
         //Gizmos.DrawRay(transform.position, Vector2.right);
 
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireCube(transform.position - new Vector3(0.4f, 0.28f), new Vector3(0.36f, 2.2f, 1));
+        Gizmos.color = Color.red;
+        //Gizmos.DrawWireCube(firePoint.transform.position, new Vector3(maxDetectRange * 3, maxDetectRange, 0));
+        Gizmos.DrawLine(firePoint.transform.position, new Vector2(firePoint.transform.position.x + maxDetectRange, firePoint.transform.position.y));
+
     }
     /*
      public bool OnDrainStart()
