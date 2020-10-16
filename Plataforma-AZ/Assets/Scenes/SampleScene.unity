@@ -3502,7 +3502,7 @@ MonoBehaviour:
   cdAttack: 0.5
   attackTime: 0.5
   range: 1
-  dmg: 3
+  dmg: 30
   attackPoint:
   - {fileID: 98599642}
   - {fileID: 448858660}
@@ -3630,7 +3630,7 @@ MonoBehaviour:
   wallSlide: 3
   flipingCd: 0.5
   keys: 0
-  stumTime: 3
+  stumTime: 1.5
   stun: 0
   ecoSpeed: 0
   visEdgeR: 0
@@ -5061,7 +5061,7 @@ MonoBehaviour:
   teste: 0
   maxHealt: 0
   currHealt: 0
-  dmg: 5
+  dmg: 10
   speed: 2
   activePatrolPoint: 0
   activeTarget: {fileID: 436080283}
@@ -5071,9 +5071,9 @@ MonoBehaviour:
   timerToLost: 2
   timer: 0
   timerMeleeHit: 2
-  maxRangePatrol: 2
+  maxRangePatrol: 1
   maxRangeDetect: 5
-  minRangeCombat: 5
+  minRangeCombat: 3
   maxRangeCombat: 10
   maxMeleeHit: 3
   rangeMeleeAttack: 2

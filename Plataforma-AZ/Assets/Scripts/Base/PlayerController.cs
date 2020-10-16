@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour, ICombat
     IEnumerator EndStum()
     {
         yield return new WaitForSecondsRealtime(stumTime);
+        GetComponent<MoveVelocity>().enabled = true; // É gambiarra memo po    >:)
         stun = false;
     }
     private void EdgeCheck()
@@ -179,6 +180,8 @@ public class PlayerController : MonoBehaviour, ICombat
     public void ApplyDmg(float dmg)
     {
         currHP -= dmg;
+        stun = true;
+        GetComponent<MoveVelocity>().enabled = false;
     }
 
     public void ApplyDmg(float dmg, string type)

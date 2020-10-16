@@ -125,7 +125,7 @@ public class IA_Enemy : MonoBehaviour
         if (hitEnemies.CompareTag("Player"))
         {
             hitEnemies.GetComponent<ICombat>().ApplyDmg(dmg);
-            hitEnemies.GetComponent<Rigidbody2D>().AddForceAtPosition(new Vector2(dmg * activeVector.x ,dmg), firePointActive.position,ForceMode2D.Impulse);
+            hitEnemies.GetComponent<Rigidbody2D>().AddForce(new Vector2(dmg * activeVector.x ,dmg),ForceMode2D.Impulse);
             Debug.Log("Acertou melee hit");
         }
 

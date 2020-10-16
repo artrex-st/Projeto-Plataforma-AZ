@@ -73,4 +73,8 @@ public class Jump : MonoBehaviour
             PlayerController.isFliping = false;
         }
     }
+    public void KnockBack(Vector2 force)
+    {
+        GetComponent<Rigidbody2D>().AddForce(force,ForceMode2D.Impulse);
+    }
 }
