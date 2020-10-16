@@ -3630,7 +3630,8 @@ MonoBehaviour:
   wallSlide: 3
   flipingCd: 0.5
   keys: 0
-  stumTime: 1.5
+  timerStum: 0
+  timerStumTrigger: 1
   stun: 0
   ecoSpeed: 0
   visEdgeR: 0
@@ -5061,7 +5062,7 @@ MonoBehaviour:
   teste: 0
   maxHealt: 0
   currHealt: 0
-  dmg: 10
+  dmg: 5
   speed: 2
   activePatrolPoint: 0
   activeTarget: {fileID: 436080283}
@@ -5070,7 +5071,8 @@ MonoBehaviour:
   timerPatrol: 3
   timerToLost: 2
   timer: 0
-  timerMeleeHit: 2
+  timerMeleeHit: 0
+  timerTriggerMeleeHit: 5
   maxRangePatrol: 1
   maxRangeDetect: 5
   minRangeCombat: 3
@@ -5080,6 +5082,10 @@ MonoBehaviour:
   runingState: 0
   onMeleeAttack: 0
   playerObj: {fileID: 1376817784}
+  hookPrefab: {fileID: 9042466528259003528, guid: e220812165bc39e4e9e570077a5141a4,
+    type: 3}
+  hookPrefabActive: {fileID: 0}
+  hookPull: {fileID: 2076038500}
   enemyBody: {fileID: 2076038495}
   enemySprite: {fileID: 1692377284}
   patrolPoints:

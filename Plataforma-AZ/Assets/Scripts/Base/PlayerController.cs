@@ -27,7 +27,9 @@ public class PlayerController : MonoBehaviour, ICombat
     public float flipingCd;
     [Space(10)]
     public float keys=0;
-    public float stumTime;
+    [Header("Timers")]
+    public float timerStum;
+    public float timerStumTrigger;
 
     public static bool isEdgeR, isEdgeL, isWallEdge, isGround, isIce, isFliping, isPunching, isKicking, isGroundSlide;
     public static bool canWS = true, canFlip = true, canMove = true;
@@ -72,9 +74,11 @@ public class PlayerController : MonoBehaviour, ICombat
     }
     IEnumerator EndStum()
     {
-        yield return new WaitForSecondsRealtime(stumTime);
+        timerStum += Time.deltaTime;
+        yield return new WaitUntil(() => timerStum > timerStumTrigger);
         GetComponent<MoveVelocity>().enabled = true; // É gambiarra memo po    >:)
         stun = false;
+        timerStum = 0;
     }
     private void EdgeCheck()
     {
