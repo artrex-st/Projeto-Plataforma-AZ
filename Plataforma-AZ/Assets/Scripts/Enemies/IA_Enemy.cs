@@ -25,6 +25,7 @@ public class IA_Enemy : MonoBehaviour
     public float timerToLost;
     public float timer;
     public float timerMeleeHit;
+    public float timerTriggerMeleeHit;
 
     [Header("Ranges")]
     public float maxRangePatrol;
@@ -40,6 +41,9 @@ public class IA_Enemy : MonoBehaviour
 
     [Header("Componentes")]
     public GameObject playerObj;
+    public GameObject hookPrefab;
+    public GameObject hookPrefabActive;
+    public SpringJoint2D hookPull;
     public Rigidbody2D enemyBody;
     public SpriteRenderer enemySprite;
     public Transform[] patrolPoints;
@@ -109,7 +113,6 @@ public class IA_Enemy : MonoBehaviour
         else if (Mathf.Abs(transform.position.x - activeTarget.position.x) <= maxMeleeHit && !onMeleeAttack)
         {
             StartCoroutine(MeleeHitAttack());
-            onMeleeAttack = true;
         }
 
     }
@@ -119,8 +122,8 @@ public class IA_Enemy : MonoBehaviour
     }
     IEnumerator MeleeHitAttack()
     {
-        yield return new WaitForSeconds(timerMeleeHit);
-        onMeleeAttack = false;
+        timerMeleeHit += Time.deltaTime;
+        yield return new WaitUntil(() => timerMeleeHit > timerTriggerMeleeHit);
         Collider2D hitEnemies = Physics2D.OverlapCircle(firePointActive.transform.position, rangeMeleeAttack, layerTarget);
         if (hitEnemies.CompareTag("Player"))
         {
@@ -128,7 +131,19 @@ public class IA_Enemy : MonoBehaviour
             hitEnemies.GetComponent<Rigidbody2D>().AddForce(new Vector2(dmg * activeVector.x ,dmg),ForceMode2D.Impulse);
             Debug.Log("Acertou melee hit");
         }
+        timerMeleeHit = 0;
 
+    }
+    IEnumerator Hook()
+    {
+        if (state == States.Combat && hookPrefabActive == null)
+        {
+
+            hookPrefabActive = Instantiate(hookPrefab, firePointActive.transform.position, transform.rotation);
+            hookPull.connectedBody = hookPrefabActive.GetComponent<Rigidbody2D>();
+            hookPrefabActive.GetComponent<SpriteRenderer>().flipX = !enemySprite.flipX;
+        }
+        yield return null;
     }
     private void Move(Transform target)
     {
