@@ -21,7 +21,7 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && PlayerController.isGround && cdAttack >= attackTime && !PlayerController.isGroundSlide)
+        if (Input.GetButton("Fire1") && PlayerController.isGround && cdAttack >= attackTime && !PlayerController.isGroundSlide && !PlayerController.isPunching)
         {
             StartCoroutine(Punch());
             cdAttack = 0;
@@ -36,7 +36,7 @@ public class Attack : MonoBehaviour
     IEnumerator Punch()
     {
         PlayerController.isPunching = true;
-        yield return 0.02f;
+        yield return 0.2f;
         AttackPointFlip();
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPointActive.transform.position, new Vector2(range, 2 * range), 0);
         foreach (Collider2D enemy in hitEnemies)
