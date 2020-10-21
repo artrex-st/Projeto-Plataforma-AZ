@@ -85,6 +85,24 @@ Tilemap:
   m_GameObject: {fileID: 6621940039900028082}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 16, y: -19, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 14, y: -18, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: 11, y: -16, z: 0}
     second:
       serializedVersion: 2
@@ -135,6 +153,33 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 14, y: -15, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 15
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 15, y: -15, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 16
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 16, y: -15, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 14
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -201,16 +246,16 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0b676001cf6aa374bb09e894b563d5b4, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0c3c5a36098d02b458fe793140658806, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 2ad35a86e0e76144fa2f440409d1cfa6, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3333d173e4be55a438ebb42d241bbe4a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4d9c5ed5fa3dda846aaeef1740dc4c38, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6510ed3b9d805e348b14e3e1603378fd, type: 2}
   - m_RefCount: 1
@@ -229,16 +274,19 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 757229cb42b84e0499138738a605eb79, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 09f79ff7a90f28949b19f46a33826c0e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -7267195308337785872, guid: 9f859c27da5a71a448287aa6105cf9e0,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -8899949944016603442, guid: 9f859c27da5a71a448287aa6105cf9e0,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1597254215702220636, guid: 9f859c27da5a71a448287aa6105cf9e0,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 3da56a5f01da24c4e8b5688a8f828ab4, type: 3}
   - m_RefCount: 1
@@ -264,7 +312,7 @@ Tilemap:
     m_Data: {fileID: -5657303321430768637, guid: 60f1432d747d8fe4aaf6edcc93846f59,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 10
+  - m_RefCount: 15
     m_Data:
       e00: 1
       e01: 0
@@ -283,7 +331,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 10
+  - m_RefCount: 15
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: -0.000000001015799, g: -0.000000001015799, b: -0.000000001015799,
