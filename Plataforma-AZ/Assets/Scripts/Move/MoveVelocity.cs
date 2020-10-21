@@ -14,7 +14,7 @@ public class MoveVelocity : MonoBehaviour, IMove
     private Vector2 axisVector;
     private Rigidbody2D rb2D;
     [SerializeField]
-    private float speed, groundSlideTimer;
+    private float speed, groundSpeed, groundSlideTimer;
     [SerializeField]
     private Boolean downRequest;
     //private Character_Base characterBase;
@@ -110,7 +110,7 @@ public class MoveVelocity : MonoBehaviour, IMove
     private void AirMove()
     {
         //speed = Mathf.Clamp(velocityVector.x + speed, -GetComponent<PlayerController>().speed, GetComponent<PlayerController>().speed);
-        rb2D.velocity = new Vector2(GetComponent<PlayerController>().speed * axisVector.x / 2, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(GetComponent<PlayerController>().speed * axisVector.x, rb2D.velocity.y);
         EcoMoveReset(8);
     }
     private void WallToFlip()
@@ -123,9 +123,9 @@ public class MoveVelocity : MonoBehaviour, IMove
     private void GroundSliding() //teste
     {
         Debug.Log($"Down request:{downRequest}");
-        rb2D.velocity = new Vector2(rb2D.velocity.x > 0 ? rb2D.velocity.x - groundSlideTimer : rb2D.velocity.x + groundSlideTimer, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(rb2D.velocity.x > 0 ? groundSpeed - groundSlideTimer : -groundSpeed + groundSlideTimer, rb2D.velocity.y);
         PlayerController.isGroundSlide = true;
-        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f)
+        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f || !PlayerController.isGround || Input.GetAxis("Vertical") >=0)
         {
             PlayerController.isGroundSlide = false;
         }
@@ -133,9 +133,9 @@ public class MoveVelocity : MonoBehaviour, IMove
     private void GroundIceSliding() //teste
     {
         Debug.Log($"Down request:{downRequest}");
-        rb2D.velocity = new Vector2(speed > 0 ? speed - groundSlideTimer : speed + groundSlideTimer, rb2D.velocity.y);
+        rb2D.velocity = new Vector2(speed > 0 ? groundSpeed - groundSlideTimer : -groundSpeed + groundSlideTimer, rb2D.velocity.y);
         PlayerController.isGroundSlide = true;
-        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f)
+        if (Mathf.Abs(rb2D.velocity.x) <= 0.06f || !PlayerController.isGround || Input.GetAxis("Vertical") >= 0)
         {
             PlayerController.isGroundSlide = false;
         }
