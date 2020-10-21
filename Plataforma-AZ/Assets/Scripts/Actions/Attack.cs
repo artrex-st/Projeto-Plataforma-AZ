@@ -44,7 +44,7 @@ public class Attack : MonoBehaviour
             if (enemy.CompareTag("Enemy"))
             {
                 Debug.LogWarning("Melee Enemy Hit in:" + enemy.name);
-                enemy.GetComponent<Rigidbody2D>().AddForce(GetComponentInChildren<SpriteRenderer>().flipX ? new Vector2(-dmg, dmg)  : new Vector2(dmg, dmg) * 2, ForceMode2D.Impulse);
+                enemy.GetComponent<Rigidbody2D>().AddForce(GetComponentInChildren<SpriteRenderer>().flipX ? new Vector2(-dmg, dmg)  : new Vector2(dmg, dmg), ForceMode2D.Impulse);
             }
             Debug.Log("Melee Hit in:" + enemy.name);
         }

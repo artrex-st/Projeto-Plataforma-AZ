@@ -15,6 +15,7 @@ public class IA_Enemy : MonoBehaviour
     public float currHealt;
     public float dmg;
     public float speed;
+    public float jumpForce;
     public int activePatrolPoint;
     public Transform activeTarget;
     public Transform preTarget;
@@ -24,20 +25,27 @@ public class IA_Enemy : MonoBehaviour
     public float timerPatrol;
     public float timerToLost;
     public float timer;
-    public float timerMeleeHit;
-    public float timerTriggerMeleeHit;
+    public float timerAttack;
+    public float timerTriggerAttack;
 
     [Header("Ranges")]
     public float maxRangePatrol;
     public float maxRangeDetect;
-    public float minRangeCombat;
     public float maxRangeCombat;
-    public float maxMeleeHit;
+    public float maxHitRange;
     public float rangeMeleeAttack;
+    public float rangeSpearAttack;
+    public float rangeAirAttack;
+    public float rangeGround;
 
     [Header("Checking")]
     public bool runingState;
     public bool onMeleeAttack;
+    public bool onGround;
+
+    [Header("counters")]
+    public int hitToSpear;
+    public int hitCont;
 
     [Header("Componentes")]
     public GameObject playerObj;
@@ -54,6 +62,7 @@ public class IA_Enemy : MonoBehaviour
     public Vector2 scanCombatArea;
     // animation
     public LayerMask layerTarget;
+    public LayerMask layerGround;
 
     void Start()
     {
@@ -64,6 +73,7 @@ public class IA_Enemy : MonoBehaviour
     }
     void Update()
     {
+        teste = Physics2D.Raycast(transform.position, Vector2.down, rangeGround, layerGround);
         switch (state)
         {
             case States.Idle:
@@ -106,45 +116,78 @@ public class IA_Enemy : MonoBehaviour
     {
         ScanCombatArea();
         ChekFlip();
-        if (Mathf.Abs(transform.position.x - activeTarget.position.x) > minRangeCombat && Mathf.Abs(transform.position.x - activeTarget.position.x) < maxRangeCombat)
+        if (Mathf.Abs(transform.position.x - activeTarget.position.x) > maxHitRange && Mathf.Abs(transform.position.y - activeTarget.position.y) <= 1)
         {
             Move(activeTarget);
         }
-        else if (Mathf.Abs(transform.position.x - activeTarget.position.x) <= maxMeleeHit && !onMeleeAttack)
+        else if (Mathf.Abs(transform.position.y - activeTarget.position.y) < 1)
         {
-            StartCoroutine(MeleeHitAttack());
+            ChoseAttack();
+        }
+        else if ((Mathf.Abs(transform.position.y - activeTarget.position.y) > 1))
+        {
+            Jump();
+            Debug.Log("JUmp");
         }
 
     }
-    public void MeleeAttack()
+    private void Jump()
     {
-
-    }
-    IEnumerator MeleeHitAttack()
-    {
-        timerMeleeHit += Time.deltaTime;
-        yield return new WaitUntil(() => timerMeleeHit > timerTriggerMeleeHit);
-        Collider2D hitEnemies = Physics2D.OverlapCircle(firePointActive.transform.position, rangeMeleeAttack, layerTarget);
-        if (hitEnemies.CompareTag("Player"))
+        if (Physics2D.Raycast(transform.position, Vector2.down, rangeGround, layerGround))
         {
-            hitEnemies.GetComponent<ICombat>().ApplyDmg(dmg);
-            hitEnemies.GetComponent<Rigidbody2D>().AddForce(new Vector2(dmg * activeVector.x ,dmg),ForceMode2D.Impulse);
-            Debug.Log("Acertou melee hit");
+            if (transform.position.y <= activeTarget.position.y)
+            {
+                enemyBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
+            }else
+                enemyBody.AddForce(Vector2.down * jumpForce, ForceMode2D.Force);
+
         }
-        timerMeleeHit = 0;
 
     }
-    IEnumerator Hook()
+    public void ChoseAttack()
     {
-        if (state == States.Combat && hookPrefabActive == null)
+        if (hitToSpear >= hitCont)
         {
-
-            hookPrefabActive = Instantiate(hookPrefab, firePointActive.transform.position, transform.rotation);
-            hookPull.connectedBody = hookPrefabActive.GetComponent<Rigidbody2D>();
-            hookPrefabActive.GetComponent<SpriteRenderer>().flipX = !enemySprite.flipX;
+            MeleeHitAttack();
         }
-        yield return null;
+        else
+        {
+            Spear();
+        }        
     }
+    private void MeleeHitAttack()
+    {
+        maxHitRange = rangeMeleeAttack;
+        timerAttack += Time.deltaTime;
+        if (timerAttack > timerTriggerAttack)
+        {
+            Collider2D hitEnemies = Physics2D.OverlapCircle(firePointActive.transform.position, maxHitRange, layerTarget);
+            if (hitEnemies.CompareTag("Player"))
+            {
+                hitEnemies.GetComponent<ICombat>().ApplyDmg(dmg);
+                hitEnemies.GetComponent<Rigidbody2D>().AddForce(new Vector2(dmg * activeVector.x ,dmg),ForceMode2D.Impulse);
+            }
+            hitCont++;
+            timerAttack = 0;
+        }
+    }
+    private void Spear()
+    {
+        maxHitRange = rangeSpearAttack;
+        timerAttack += Time.deltaTime;
+        if (timerAttack > timerTriggerAttack)
+        {
+            RaycastHit2D spearHit = Physics2D.Raycast(firePointActive.transform.position, activeVector, maxHitRange, layerTarget);
+            if (spearHit.transform.CompareTag("Player"))
+            {
+                spearHit.transform.GetComponent<ICombat>().ApplyDmg(dmg);
+                spearHit.transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(dmg * activeVector.x, dmg), ForceMode2D.Impulse);
+            }
+            hitCont = 0;
+            timerAttack = 0;
+        }
+    }
+    
     private void Move(Transform target)
     {
         transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(target.position.x, transform.position.y), speed * Time.deltaTime);
@@ -215,7 +258,6 @@ public class IA_Enemy : MonoBehaviour
         Collider2D hitCombatArea = Physics2D.OverlapBox(transform.position, scanCombatArea, 0, layerTarget);
         if (hitCombatArea != null)
         {
-            Debug.Log("Ainda em combate PA-PAPA");
             timer = 0;
         }
         else
@@ -231,14 +273,25 @@ public class IA_Enemy : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+        // Melee Hit Range
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(firePointActive.position, rangeMeleeAttack);
+
+        // Scan range
         Gizmos.color = Color.red;
         Gizmos.DrawLine(firePointActive.transform.position, new Vector2(firePointActive.transform.position.x + maxRangeDetect * activeVector.x, firePointActive.transform.position.y));
 
+        // combat area
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, scanCombatArea);
 
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(firePointActive.position, rangeMeleeAttack);
+        // Melee or Spear Hit Range
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(firePointActive.transform.position, new Vector2(firePointActive.transform.position.x + maxHitRange * activeVector.x, firePointActive.transform.position.y));
+
+        //air attack
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(firePointActive.transform.position, new Vector2(firePointActive.transform.position.x + maxHitRange * activeVector.x, activeTarget.position.y));
 
     }
 }
