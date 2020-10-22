@@ -43,7 +43,6 @@ public class MoveToTargetState : IStates
         if (!moveToDone)
         {
             Debug.Log($"Patroling {moveToIndex} disctancia: {Mathf.Abs(active.transform.position.x - moveToTarget.position.x)}");
-            active.transform.position = Vector2.MoveTowards(active.transform.position,moveToTarget.position,moveToSpeed * Time.deltaTime);
             if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
             {
                 moveToDone = true;
@@ -54,7 +53,8 @@ public class MoveToTargetState : IStates
                     Debug.Log("Fora de alcance.");
                 }else
                     Debug.Log("Dentro do alcance.");
-            }
+            }else
+                active.transform.position = Vector2.MoveTowards(active.transform.position,moveToTarget.position,moveToSpeed * Time.deltaTime);
             var patrolCircleResults = new MoveToResults(moveToIndex, moveToPoints, moveToDone);
             moveToResultsCallBack(patrolCircleResults);
         }
