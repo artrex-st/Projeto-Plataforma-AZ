@@ -10,12 +10,12 @@ public class Hook : MonoBehaviour
     public LayerMask targetLayer;
     public string tagTarget;
     [Header("Patrol")]
-    public Transform patrolTarget;
-    public float patrolSpeed;
-    public float patrolMinRange;
-    public float patrolMaxRange;
-    public List<Transform> patrolPoints;
-    public int patrolIndex;
+    public Transform moveToTarget;
+    public float moveToSpeed;
+    public float moveToMinRange;
+    public float moveToMaxRange;
+    public List<Transform> moveToPoints;
+    public int moveToIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +30,9 @@ public class Hook : MonoBehaviour
     }
 
     #region StatesTriggers
-    public void TriggerPatrol()
+    public void TriggerMoveTo()
     {
-        stateMachine.ChangeState(new PatrolState(active,patrolTarget,patrolSpeed,patrolMinRange,patrolMaxRange,patrolPoints,patrolIndex,PatrolDone));
+        stateMachine.ChangeState(new MoveToTargetState(active,moveToTarget,moveToSpeed,moveToMinRange,moveToMaxRange,moveToPoints,moveToIndex,MoveToDone));
     }
     private void TriggerCircleScan()
     {
@@ -44,16 +44,16 @@ public class Hook : MonoBehaviour
         var scanItens = scanResults.allCollScanTag;
         if (scanItens.Count >=1)
         {
-            patrolTarget = scanItens[0].transform;
-            TriggerPatrol();
+            moveToTarget = scanItens[0].transform;
+            TriggerMoveTo();
         }
     }
-    public void PatrolDone(PatrolResults patrolResult)
+    public void MoveToDone(MoveToResults moveToResult)
     {
-        Debug.Log($"Patrol: {patrolIndex} e {patrolResult.activePatrolPoint}");
-        if (patrolIndex != patrolResult.activePatrolPoint && patrolResult.patrolDone)
+        Debug.Log($"Patrol: {moveToIndex} e {moveToResult.activeMoveToPoint}");
+        if (moveToIndex != moveToResult.activeMoveToPoint && moveToResult.patrolDone)
         {
-            patrolIndex = patrolResult.activePatrolPoint;
+            moveToIndex = moveToResult.activeMoveToPoint;
             StartCoroutine(CdTimerStartScan(2));
         }
     }
