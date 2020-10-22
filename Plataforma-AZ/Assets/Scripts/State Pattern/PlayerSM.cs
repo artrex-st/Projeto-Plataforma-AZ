@@ -16,6 +16,9 @@ public class PlayerSM : MonoBehaviour
     public float jumpGroundRange;
     public LayerMask jumpGroundLayer;
 
+    // player
+    public bool jumpRequest;
+
     #region States triggrers
     private void TriggerMove()
     {
@@ -29,20 +32,25 @@ public class PlayerSM : MonoBehaviour
     void Start()
     {
         TriggerMove();
-        TriggerJump();
     }
     void Update()
     {
-        if (JumpGroundCheck() && Input.GetButtonDown("Jump"))
-        {
-            actionSM.ExecuteActiveState();
-        }
         moveSM.ExecuteActiveState();
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpRequest = true;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (jumpRequest)
+        {
+            jumpRequest = false;
+            TriggerJump();
+        }
+        actionSM.ExecuteActiveState();
     }
     #region Variables
-    private bool JumpGroundCheck()
-    {
-        return Physics2D.Raycast(jumpFootPoint.position, Vector2.down, jumpGroundRange, jumpGroundLayer);
-    }
+    
     #endregion
 }

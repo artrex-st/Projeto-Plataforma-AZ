@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class JumpState : IStates
 {
+    private bool jumpCheckIn;
+
     private Rigidbody2D jumpBody;
     private float jumpForce;
-
-    private bool jumpCheckIn;
 
     private Transform jumpFootPoint;
     private float jumpGroundCheckRange;
@@ -25,13 +25,15 @@ public class JumpState : IStates
     public void EnterState()
     {
         Debug.Log($"Entrando no estado: {GetType().Name}");
+        jumpCheckIn = true;
     }
 
     public void ExecuteState()
     {
-        if (JumpGroundCheck())
+        if (jumpCheckIn && JumpGroundCheck())
         {
             jumpBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpCheckIn = false;
         }
     }
     public void ExitState()
