@@ -6,12 +6,11 @@ public class MoveAxisState : IStates
 {
     private Rigidbody2D moveAxisBody;
     private float moveAxisSpeed;
-    private bool moveAxisCanMove;
-    public MoveAxisState(Rigidbody2D moveAxisBody, float moveAxisSpeed, bool moveAxisCanMove)
+    private float moveAxisDirection;
+    public MoveAxisState(Rigidbody2D moveAxisBody, float moveAxisSpeed)
     {
         this.moveAxisBody = moveAxisBody;
         this.moveAxisSpeed = moveAxisSpeed;
-        this.moveAxisCanMove = moveAxisCanMove;
     }
     public void EnterState()
     {
@@ -19,10 +18,7 @@ public class MoveAxisState : IStates
     }
     public void ExecuteState()
     {
-        if (moveAxisCanMove)
-        {
-            moveAxisBody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveAxisSpeed, moveAxisBody.velocity.y);
-        }
+        moveAxisBody.velocity = new Vector2(Input.GetAxis("Horizontal") * moveAxisSpeed, moveAxisBody.velocity.y);
     }
     public void ExitState()
     {

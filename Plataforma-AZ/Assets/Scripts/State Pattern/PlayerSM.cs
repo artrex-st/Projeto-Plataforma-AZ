@@ -10,21 +10,39 @@ public class PlayerSM : MonoBehaviour
     public float moveSpeed;
     public Vector2 moveAxis;
     public bool canMove;
+    [Tooltip("Jump")]
+    public float jumpForce;
+    public Transform jumpFootPoint;
+    public float jumpGroundRange;
+    public LayerMask jumpGroundLayer;
 
+    #region States triggrers
+    private void TriggerMove()
+    {
+        moveSM.ChangeState(new MoveAxisState(playerBody, moveSpeed));
+    }
+    private void TriggerJump()
+    {
+        actionSM.ChangeState(new JumpState(playerBody, jumpForce, jumpFootPoint, jumpGroundRange, jumpGroundLayer));
+    }
+    #endregion
     void Start()
     {
-        moveSM.ChangeState(new MoveAxisState(playerBody, moveSpeed, canMove));
-        //actionSM.ChangeState(new MoveAxisState(playerBody, moveSpeed, canMove));
+        TriggerMove();
+        TriggerJump();
     }
-
     void Update()
     {
+        if (JumpGroundCheck() && Input.GetButtonDown("Jump"))
+        {
+            actionSM.ExecuteActiveState();
+        }
         moveSM.ExecuteActiveState();
-        actionSM.ExecuteActiveState();
     }
-
-    public void TriggerMoveAxis()
+    #region Variables
+    private bool JumpGroundCheck()
     {
-        //actionSM.ChangeState(new MoveToTargetState());
+        return Physics2D.Raycast(jumpFootPoint.position, Vector2.down, jumpGroundRange, jumpGroundLayer);
     }
+    #endregion
 }
