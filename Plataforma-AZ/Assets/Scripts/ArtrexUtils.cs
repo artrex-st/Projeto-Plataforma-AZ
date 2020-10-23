@@ -29,7 +29,7 @@ namespace ArtrexUtils
         /// <returns></returns>
         public static quaternion Flip2D(float velocity, Quaternion side)
         {
-            if (velocity > 0)
+            if (velocity >= 0)
                 return new Quaternion(0, 0, 0, 0); //correndo para direita;
             else
             if (velocity < 0)
