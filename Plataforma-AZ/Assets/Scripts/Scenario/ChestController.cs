@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChestController : MonoBehaviour
 {
     private Boolean isLocked = true;
+    public int playerKeyCost;
     [SerializeField]
     private GameObject coverOpen;
 
@@ -20,9 +21,9 @@ public class ChestController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isLocked)
         {
-            if (collision.gameObject.GetComponent<PlayerController>().keys >= 1)
+            if (collision.gameObject.GetComponent<PlayerSM>().playerKeys >= playerKeyCost)
             {
-                collision.gameObject.GetComponent<PlayerController>().UseKey();
+                collision.gameObject.GetComponent<PlayerSM>().UseKeys(playerKeyCost);
                 isLocked = false;
             }
 

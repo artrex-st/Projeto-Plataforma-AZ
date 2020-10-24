@@ -5,6 +5,7 @@ public class KeyScript : MonoBehaviour
 {
     [SerializeField]
     private AnimationCurve curve;
+    public int keyValue;
     private void Awake()
     {
         transform.tag = "Key";
@@ -17,7 +18,7 @@ public class KeyScript : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().keys++;
+            collision.gameObject.GetComponent<PlayerSM>().AddKeys(keyValue);
             Destroy(gameObject, 0.1f);
         }
     }

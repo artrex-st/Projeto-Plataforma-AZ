@@ -7,6 +7,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     private Boolean isLocked = true;
+    public int dorKeyCost;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +26,9 @@ public class DoorController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.GetComponent<PlayerController>().keys >= 1)
+            if (collision.gameObject.GetComponent<PlayerSM>().playerKeys >= dorKeyCost)
             {
-                collision.gameObject.GetComponent<PlayerController>().UseKey();
+                collision.gameObject.GetComponent<PlayerSM>().UseKeys(dorKeyCost);
                 isLocked = false;
                 Destroy(gameObject,1f);
             }

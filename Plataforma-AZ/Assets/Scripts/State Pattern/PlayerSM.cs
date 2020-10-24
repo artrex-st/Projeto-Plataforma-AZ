@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSM : MonoBehaviour
+public class PlayerSM : MonoBehaviour, ICombat
 {
     public StateMachine moveSM = new StateMachine();
     public StateMachine actionSM = new StateMachine();
     [Header("Player Components")]
     public Animator playerAnimator;
     public Rigidbody2D playerBody;
+    public float playerHP;
+    public float playerMaxHP;
+    public int playerKeys;
 
     [Header("Boolean's")]
     public bool canMove;
@@ -19,6 +22,7 @@ public class PlayerSM : MonoBehaviour
     public bool canWallJump;
     public bool onStun;
     public bool onGroundSlide;
+    public bool onHurt; //
     
     [Header("Move")]
     public float moveSpeed;
@@ -75,22 +79,19 @@ public class PlayerSM : MonoBehaviour
     {
         if ((isFliped && Input.GetAxisRaw("Horizontal") <= 0) || (!isFliped && Input.GetAxisRaw("Horizontal") >= 0))
         {
-            actionSM.ChangeState(new WallJumpState(playerBody, inputX * -1, 6, 1, wJPoint, wJRange, wJLayer));
+            actionSM.ChangeState(new WallJumpState(playerBody, inputX * -1, 0, 1, wJPoint, wJRange, wJLayer));
         }else
             actionSM.ChangeState(new WallJumpState(playerBody, inputX, wJForceX, wJForceY, wJPoint, wJRange, wJLayer));
     }
     #endregion
     void Start()
     {
+        playerHP = playerMaxHP;
         TriggerMove();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Quit");
-            Application.Quit();
-        }
+        UiKeys();
         JumpGroundCheck();
         inputX = Input.GetAxis("Horizontal");
         //
@@ -158,6 +159,13 @@ public class PlayerSM : MonoBehaviour
         playerAnimator.SetBool("isGroundSlide", onGroundSlide);
         
     }
+    private void UiKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
     private void JumpGroundCheck()
     {
         isGround = Physics2D.Raycast(jumpFootPoint.position, Vector2.down, jumpGroundRange, jumpGroundLayer);
@@ -178,10 +186,28 @@ public class PlayerSM : MonoBehaviour
             isFliped = !isFliped;
         }
     }
+    public void ApplyDmg(float dmg)
+    {
+        playerHP -= dmg;
+    }
+
+    public void ApplyDmg(float dmg, string type)
+    {
+        throw new System.NotImplementedException();
+    }
+    public void AddKeys(int keyValue)
+    {
+        playerKeys += keyValue;
+    }
+    public void UseKeys(int keyValue)
+    {
+        playerKeys -= keyValue;
+    }
     #endregion
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(wJPoint.position, wJRange);
     }
+
 }
