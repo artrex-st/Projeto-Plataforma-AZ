@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Cenario
+    uniqueID: 2799359673
+    locked: 0
   - name: UI
     uniqueID: 2543383327
     locked: 0

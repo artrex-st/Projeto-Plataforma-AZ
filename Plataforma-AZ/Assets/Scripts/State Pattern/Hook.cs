@@ -32,7 +32,7 @@ public class Hook : MonoBehaviour
     #region StatesTriggers
     public void TriggerMoveTo()
     {
-        stateMachine.ChangeState(new MoveToTargetState(active,moveToTarget,moveToSpeed,moveToMinRange,moveToMaxRange,moveToPoints,moveToIndex,MoveToDone));
+        stateMachine.ChangeState(new MoveToTargetState(active,moveToSpeed,moveToMinRange,moveToMaxRange,moveToPoints,moveToIndex,MoveToDone));
     }
     private void TriggerCircleScan()
     {

@@ -16,10 +16,10 @@ public class MoveToTargetState : IStates
 
     private bool moveToDone;
 
-    public MoveToTargetState(GameObject active, Transform moveToTarget, float moveToSpeed, float moveToMinRange, float moveToMaxRange, List<Transform> moveToPoints, int moveToIndex, Action<MoveToResults> moveToResultsCallBack)
+    public MoveToTargetState(GameObject active, float moveToSpeed, float moveToMinRange, float moveToMaxRange, List<Transform> moveToPoints, int moveToIndex, Action<MoveToResults> moveToResultsCallBack)
     {
         this.active = active;
-        this.moveToTarget = moveToTarget;
+        //this.moveToTarget = moveToTarget;
         this.moveToSpeed = moveToSpeed;
         this.moveToMinRange = moveToMinRange;
         this.moveToMaxRange = moveToMaxRange;
@@ -31,6 +31,7 @@ public class MoveToTargetState : IStates
     public void EnterState()
     {
         Debug.Log($"entrando Patroling {moveToIndex}");
+        moveToTarget = moveToPoints[moveToIndex];
         moveToIndex++;
         if (moveToPoints.Count <= 0)
         {

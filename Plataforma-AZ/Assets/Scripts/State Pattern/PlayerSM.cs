@@ -73,7 +73,7 @@ public class PlayerSM : MonoBehaviour
     }
     private void TriggerJumpWall()
     {
-        if ((isFliped && inputX <= 0) || (!isFliped && inputX >= 0))
+        if ((isFliped && Input.GetAxisRaw("Horizontal") <= 0) || (!isFliped && Input.GetAxisRaw("Horizontal") >= 0))
         {
             actionSM.ChangeState(new WallJumpState(playerBody, inputX * -1, 6, 1, wJPoint, wJRange, wJLayer));
         }else
