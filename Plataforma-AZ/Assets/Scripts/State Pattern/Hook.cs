@@ -16,6 +16,7 @@ public class Hook : MonoBehaviour
     public float moveToMaxRange;
     public List<Transform> moveToPoints;
     public int moveToIndex;
+    public float cdPatrolTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,7 @@ public class Hook : MonoBehaviour
         if (moveToIndex != moveToResult.activeMoveToPoint && moveToResult.patrolDone)
         {
             moveToIndex = moveToResult.activeMoveToPoint;
-            StartCoroutine(CdTimerStartScan(2));
+            StartCoroutine(CdTimerStartScan(cdPatrolTimer));
         }
     }
     public IEnumerator CdTimerStartScan(float cdTimer)
