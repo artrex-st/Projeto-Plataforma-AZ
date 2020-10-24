@@ -24,7 +24,6 @@ public class MoveSlideState : IStates
     }
     public void EnterState()
     {
-        Debug.Log($"Entrando no estado: {GetType().Name} @@@");
         gSDone = false;
         gSBaseColl.enabled = false;
         gSNewColl.enabled = true;

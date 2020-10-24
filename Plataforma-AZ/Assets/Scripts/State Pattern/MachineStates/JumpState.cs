@@ -24,7 +24,6 @@ public class JumpState : IStates
 
     public void EnterState()
     {
-        Debug.Log($"Entrando no estado: {GetType().Name}");
         jumpCheckIn = true;
     }
 
@@ -38,7 +37,6 @@ public class JumpState : IStates
     }
     public void ExitState()
     {
-        Debug.Log($"Saindo do estado: {GetType().Name}");
     }
 
     #region Variables

@@ -27,7 +27,6 @@ public class WallJumpState : IStates
     }
     public void EnterState()
     {
-        Debug.Log($"Entrando no estado: {GetType().Name}");
         jumpCheckIn = true;
     }
     public void ExecuteState()
@@ -40,7 +39,7 @@ public class WallJumpState : IStates
     }
     public void ExitState()
     {
-        Debug.Log($"Saindo do estado: {GetType().Name}");
+
     }
     #region Variables
     private bool JumpWallCheck()

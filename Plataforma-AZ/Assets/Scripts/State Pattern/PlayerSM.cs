@@ -86,6 +86,11 @@ public class PlayerSM : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Quit");
+            Application.Quit();
+        }
         JumpGroundCheck();
         inputX = Input.GetAxis("Horizontal");
         //
