@@ -99,13 +99,16 @@ public class PlayerSM : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Vertical") == 0)
         {
-            Flip2D();
             onGroundSlide = false;
             TriggerMove();
         }
         //
         if (canMove)
         {
+            if (!onGroundSlide)
+            {
+                Flip2D();
+            }
             moveSM.ExecuteActiveState();
         }
         else if (isGround && !onStun)
