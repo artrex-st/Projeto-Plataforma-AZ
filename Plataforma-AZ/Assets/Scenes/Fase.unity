@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 341398052}
+  moveMode: 0
   moveToTarget: {fileID: 0}
   moveToSpeed: 3
   moveToMinRange: 1
@@ -1140,6 +1141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 670019904}
+  moveMode: 0
   moveToTarget: {fileID: 0}
   moveToSpeed: 3
   moveToMinRange: 1
@@ -1596,6 +1598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 832205487}
+  moveMode: 0
   moveToTarget: {fileID: 0}
   moveToSpeed: 3
   moveToMinRange: 1
@@ -2602,6 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 1382554050}
+  moveMode: 0
   moveToTarget: {fileID: 0}
   moveToSpeed: 3
   moveToMinRange: 1
