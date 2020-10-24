@@ -58,16 +58,19 @@ public class PlayerSM : MonoBehaviour, ICombat
     #region States triggrers
     private void TriggerMove()
     {
+        onGroundSlide = false;
         moveSM.ChangeState(new MoveAxisState(playerBody, moveSpeed));
     }
     private void TriggerMoveSlide()
     {
         if (inputX >= 0.8f && playerBody.velocity.x >= 0.8f)
         {
+            onGroundSlide = true;
             moveSM.ChangeState(new MoveSlideState(playerBody, 1, gSSpeed, gSBaseColl, gSNewColl, gSTime));
         }
         else if (inputX <= -0.8f && playerBody.velocity.x <= -0.8f)
         {
+            onGroundSlide = true;
             moveSM.ChangeState(new MoveSlideState(playerBody, -1, gSSpeed, gSBaseColl, gSNewColl, gSTime));
         }
     }
@@ -101,11 +104,9 @@ public class PlayerSM : MonoBehaviour, ICombat
             {
                 TriggerMoveSlide();
             }
-            onGroundSlide = true;
         }
         else if (Input.GetAxisRaw("Vertical") == 0)
         {
-            onGroundSlide = false;
             TriggerMove();
         }
         //

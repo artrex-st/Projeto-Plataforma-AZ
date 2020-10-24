@@ -65,6 +65,7 @@ public class DrillMoveSM : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<ICombat>().ApplyDmg(drillDMG);
+            Debug.Log("Damage ON");
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
