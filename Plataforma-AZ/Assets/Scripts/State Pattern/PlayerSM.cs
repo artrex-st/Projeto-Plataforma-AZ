@@ -9,6 +9,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     [Header("Player Components")]
     public Animator playerAnimator;
     public Rigidbody2D playerBody;
+    public UiBar healthBar;
     public float playerHP;
     public float playerMaxHP;
     public int playerKeys;
@@ -91,6 +92,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     {
         playerHP = playerMaxHP;
         TriggerMove();
+        healthBar.SetMaxFill(playerMaxHP);
     }
     void Update()
     {
@@ -190,6 +192,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     public void ApplyDmg(float dmg)
     {
         playerHP -= dmg;
+        healthBar.SetFill(playerHP);
     }
 
     public void ApplyDmg(float dmg, string type)
