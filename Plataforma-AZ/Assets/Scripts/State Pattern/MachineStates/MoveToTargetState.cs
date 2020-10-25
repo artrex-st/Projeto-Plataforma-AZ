@@ -6,6 +6,7 @@ using UnityEngine;
 public class MoveToTargetState : IStates
 {
     private GameObject active;
+    private Rigidbody2D activeBody;
     private Transform moveToTarget;
     private float moveToSpeed;
     private float moveToMinRange;
@@ -61,8 +62,11 @@ public class MoveToTargetState : IStates
         {
             moveToPoints.Add(active.transform);
         }
+        if (moveToType >=3)
+        {
+            activeBody = active.GetComponent<Rigidbody2D>();
+        }
     }
-
     public void ExecuteState()
     {
         if (!moveToDone)
@@ -72,7 +76,6 @@ public class MoveToTargetState : IStates
             moveToResultsCallBack(patrolCircleResults);
         }
     }
-
     public void ExitState()
     {
         //Debug.Log($"Saindo Patroling {moveToIndex}");
@@ -90,6 +93,18 @@ public class MoveToTargetState : IStates
         else if (moveToType == 2)
         {
             MoveY();
+        }
+        else if (moveToType == 3)
+        {
+            MoveBodyXY();
+        }
+        else if (moveToType == 4)
+        {
+            MoveBodyX();
+        }
+        else if (moveToType == 5)
+        {
+            MoveBodyY();
         }
     }
     private void MoveXY()
@@ -124,6 +139,60 @@ public class MoveToTargetState : IStates
         }
         else
             active.transform.position = Vector2.MoveTowards(active.transform.position, new Vector2(active.transform.position.x, moveToTarget.transform.position.y), moveToSpeed * Time.deltaTime);
+    }
+    // force move
+    private void MoveBodyXY()
+    {
+        if (Vector2.Distance(active.transform.position, moveToTarget.transform.position) <= moveToMinRange || Vector2.Distance(active.transform.position, moveToTarget.transform.position) >= moveToMaxRange)
+        {
+            moveToDone = true;
+        }
+        else
+        {
+            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
+            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
+            activeBody.velocity = new Vector2(moveToSpeed * fliped, moveToSpeed * upDown);
+
+            //Input.GetAxis("Horizontal") * moveAxisSpeed
+        }
+    } 
+    private void MoveBodyX()
+    {
+        if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
+        {
+            moveToDone = true;
+            // testes
+            //Debug.Log("Fim da patrulha");
+            //if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
+            //{
+            //    Debug.Log("Fora de alcance.");
+            //}else
+            //    Debug.Log("Dentro do alcance.");
+        }
+        else
+        {
+            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
+            activeBody.velocity = new Vector2(moveToSpeed * fliped, activeBody.velocity.y);
+        }
+    }
+    private void MoveBodyY()
+    {
+        if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
+        {
+            moveToDone = true;
+            // testes
+            //Debug.Log("Fim da patrulha");
+            //if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
+            //{
+            //    Debug.Log("Fora de alcance.");
+            //}else
+            //    Debug.Log("Dentro do alcance.");
+        }
+        else
+        {
+            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
+            activeBody.velocity = new Vector2(activeBody.velocity.x, moveToSpeed * upDown);
+        }
     }
 }
 

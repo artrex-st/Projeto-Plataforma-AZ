@@ -21,12 +21,10 @@ public class JumpState : IStates
         this.jumpGroundCheckRange = jumpGroundCheckRange;
         this.jumpGroundLayer = jumpGroundLayer;
     }
-
     public void EnterState()
     {
         jumpCheckIn = true;
     }
-
     public void ExecuteState()
     {
         if (jumpCheckIn && JumpGroundCheck())
@@ -37,8 +35,8 @@ public class JumpState : IStates
     }
     public void ExitState()
     {
-    }
 
+    }
     #region Variables
     private bool JumpGroundCheck()
     {

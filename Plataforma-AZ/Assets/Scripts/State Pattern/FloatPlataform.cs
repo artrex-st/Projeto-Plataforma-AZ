@@ -6,7 +6,7 @@ public class FloatPlataform : MonoBehaviour
 {
     public StateMachine stateMachine = new StateMachine();
     public GameObject active;
-    public enum MoveMode { Diagonal, Horizontal, Vertical }
+    public enum MoveMode { Diagonal, Horizontal, Vertical}
     public MoveMode moveMode = MoveMode.Diagonal;
     [Header("Patrol")]
     public Transform moveToTarget;
