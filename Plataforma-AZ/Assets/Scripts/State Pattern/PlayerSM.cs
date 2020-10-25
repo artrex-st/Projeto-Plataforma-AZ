@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerSM : MonoBehaviour, ICombat
@@ -9,10 +10,15 @@ public class PlayerSM : MonoBehaviour, ICombat
     [Header("Player Components")]
     public Animator playerAnimator;
     public Rigidbody2D playerBody;
+    public SpriteRenderer playerSprite;
     public UiBar healthBar;
+    public TextMeshProUGUI textmeshPro;
     public float playerHP;
     public float playerMaxHP;
     public int playerKeys;
+
+    [Header("Timers")]
+    public float resumeControlCD;
 
     [Header("Boolean's")]
     public bool canMove;
@@ -93,6 +99,7 @@ public class PlayerSM : MonoBehaviour, ICombat
         playerHP = playerMaxHP;
         TriggerMove();
         healthBar.SetMaxFill(playerMaxHP);
+        textmeshPro.text = $"{textmeshPro.text} \n Versão:{Application.version} \n Data: 24/10/2020";
     }
     void Update()
     {
@@ -125,7 +132,7 @@ public class PlayerSM : MonoBehaviour, ICombat
             canMove = true;
         }
         //
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && (isGround || canWallJump))
         {
             jumpRequest = true;
         }
@@ -133,7 +140,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     }
     private void FixedUpdate()
     {
-        if (jumpRequest && isGround)
+        if (jumpRequest && isGround && !canWallJump)
         {
             TriggerJump();
             jumpRequest = false;
@@ -173,7 +180,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     {
         isGround = Physics2D.Raycast(jumpFootPoint.position, Vector2.down, jumpGroundRange, jumpGroundLayer);
         isWall = Physics2D.OverlapCircle(wJPoint.position, wJRange, wJLayer);
-        canWallJump = isWall && !isGround && inputX != 0;
+        canWallJump = isWall && !isGround && inputX != 0 && playerBody.velocity.y <= 0;
     }
     private IEnumerator ResetCanMove()
     {
@@ -191,10 +198,27 @@ public class PlayerSM : MonoBehaviour, ICombat
     }
     public void ApplyDmg(float dmg)
     {
-        playerHP -= dmg;
-        healthBar.SetFill(playerHP);
+        if (!onHurt)
+        {
+            playerHP -= dmg;
+            healthBar.SetFill(playerHP);
+            onHurt = true;
+            StartCoroutine(ResumeControl());
+        }
     }
+    private IEnumerator ResumeControl()
+    {
+        if (playerSprite.color == Color.white)
+        {
+            playerSprite.color = Color.Lerp(Color.white, Color.black, 5 * Time.deltaTime);
+        }else
+            playerSprite.color = Color.Lerp(Color.white, Color.black, 5 * Time.deltaTime);
 
+
+        yield return new WaitForSeconds(resumeControlCD);
+        onHurt = false;
+
+    }
     public void ApplyDmg(float dmg, string type)
     {
         throw new System.NotImplementedException();

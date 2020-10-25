@@ -329,6 +329,12 @@ Transform:
   m_Father: {fileID: 2075999735}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &239456615 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8661094138558976971, guid: fb74bac3d83f8714b94d5c7b369de97a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2101047326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &341398052
 GameObject:
   m_ObjectHideFlags: 0
@@ -30553,7 +30559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Projeto AZ \nPRE-ALPHA Build: 23/10/2020\n(ESC para Fechar)"
+  m_text: ' ESC para fechar'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30581,7 +30587,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.75
+  m_fontSize: 80
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30622,12 +30628,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.4241333, w: 0}
   m_textInfo:
     textComponent: {fileID: 1769656743}
-    characterCount: 57
+    characterCount: 16
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 10
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 3
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -32807,6 +32813,21 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2129213676}
+    - target: {fileID: 8661094140246810174, guid: fb74bac3d83f8714b94d5c7b369de97a,
+        type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 239456615}
+    - target: {fileID: 8661094140246810174, guid: fb74bac3d83f8714b94d5c7b369de97a,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1769656743}
+    - target: {fileID: 8661094140246810174, guid: fb74bac3d83f8714b94d5c7b369de97a,
+        type: 3}
+      propertyPath: textmeshPro
+      value: 
+      objectReference: {fileID: 1769656743}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb74bac3d83f8714b94d5c7b369de97a, type: 3}
 --- !u!1001 &2101791283
@@ -33034,6 +33055,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2089468821}
     m_Modifications:
+    - target: {fileID: 51939362238993392, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362238993392, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362238993392, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362238993394, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362854391776, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 51939362854391778, guid: eaefb6f2fb051064687a49751537a475,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33153,6 +33199,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362867221110, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.024139404
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362867221110, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.04827881
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362940341693, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 51939362940341693, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 462.42053
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238546007842090882, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238546007842090882, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238546007842090882, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238546007842090882, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861106079587894673, guid: eaefb6f2fb051064687a49751537a475,
+        type: 3}
+      propertyPath: m_Name
+      value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaefb6f2fb051064687a49751537a475, type: 3}
