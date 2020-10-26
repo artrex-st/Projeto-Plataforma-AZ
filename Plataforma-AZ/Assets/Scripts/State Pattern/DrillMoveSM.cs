@@ -8,6 +8,7 @@ public class DrillMoveSM : MonoBehaviour
     public GameObject active;
     public bool activeMove;
     [Header("Patrol")]
+    public MoveMode moveMode = MoveMode.Vertical;
     public Transform moveToTarget;
     public float moveToSpeed;
     public float moveToMinRange;
@@ -16,6 +17,7 @@ public class DrillMoveSM : MonoBehaviour
     public int moveToIndex;
     public float moveDelay;
     public float drillDMG;
+    
 
 
     void Start()
@@ -37,7 +39,7 @@ public class DrillMoveSM : MonoBehaviour
     #region trigger
     private void TriggerMoveTo()
     {
-        stateMachine.ChangeState(new MoveToTargetState(active, moveToSpeed, moveToMinRange, moveToMaxRange, moveToPoints, moveToIndex, MoveToDone,2));
+        stateMachine.ChangeState(new MoveToTargetState(active, moveToSpeed, moveToMinRange, moveToMaxRange, moveToPoints, moveToIndex, MoveToDone, moveMode));
     }
     #endregion
 

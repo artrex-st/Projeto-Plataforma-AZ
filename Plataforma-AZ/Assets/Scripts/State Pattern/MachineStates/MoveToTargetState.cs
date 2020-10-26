@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum MoveMode { Diagonal, Horizontal, Vertical, BodyDiagonal, BodyHorizontal, BodyVertical, TransformDiagonal, TransformHorizontal, TransformVertical };
 
 public class MoveToTargetState : IStates
 {
@@ -15,7 +16,7 @@ public class MoveToTargetState : IStates
     private int moveToIndex;
     private System.Action<MoveToResults> moveToResultsCallBack;
     private int moveToType = 0;
-
+    private MoveMode moveMode;
     private bool moveToDone;
 
     public MoveToTargetState(GameObject active, float moveToSpeed, float moveToMinRange, float moveToMaxRange, List<Transform> moveToPoints, int moveToIndex, Action<MoveToResults> moveToResultsCallBack)
@@ -40,7 +41,7 @@ public class MoveToTargetState : IStates
     /// <param name="moveToIndex"></param>
     /// <param name="moveToResultsCallBack"></param>
     /// <param name="moveToType">0=XY, 1=X, 2=Y </param>
-    public MoveToTargetState(GameObject active, float moveToSpeed, float moveToMinRange, float moveToMaxRange, List<Transform> moveToPoints, int moveToIndex, Action<MoveToResults> moveToResultsCallBack, int moveToType)
+    public MoveToTargetState(GameObject active, float moveToSpeed, float moveToMinRange, float moveToMaxRange, List<Transform> moveToPoints, int moveToIndex, Action<MoveToResults> moveToResultsCallBack, MoveMode moveMode)
     {
         this.active = active;
         //this.moveToTarget = moveToTarget;
@@ -50,7 +51,7 @@ public class MoveToTargetState : IStates
         this.moveToPoints = moveToPoints;
         this.moveToIndex = moveToIndex;
         this.moveToResultsCallBack = moveToResultsCallBack;
-        this.moveToType = moveToType;
+        this.moveMode = moveMode;
     }
 
     public void EnterState()
@@ -62,7 +63,7 @@ public class MoveToTargetState : IStates
         {
             moveToPoints.Add(active.transform);
         }
-        if (moveToType >=3)
+        if (moveMode.Equals(MoveMode.BodyDiagonal) || moveMode.Equals(MoveMode.BodyVertical) || moveMode.Equals(MoveMode.BodyHorizontal))
         {
             activeBody = active.GetComponent<Rigidbody2D>();
         }
@@ -82,29 +83,35 @@ public class MoveToTargetState : IStates
     }
     private void ChoseMove()
     {
-        if (moveToType == 0)
+        switch (moveMode)
         {
-            MoveXY();
-        }
-        else if (moveToType == 1)
-        {
-            MoveX();
-        }
-        else if (moveToType == 2)
-        {
-            MoveY();
-        }
-        else if (moveToType == 3)
-        {
-            MoveBodyXY();
-        }
-        else if (moveToType == 4)
-        {
-            MoveBodyX();
-        }
-        else if (moveToType == 5)
-        {
-            MoveBodyY();
+            case MoveMode.Diagonal:
+                MoveXY();
+                break;
+            case MoveMode.Horizontal:
+                MoveX();
+                break;
+            case MoveMode.Vertical:
+                MoveY();
+                break;
+            case MoveMode.BodyDiagonal:
+                MoveBodyXY();
+                break;
+            case MoveMode.BodyHorizontal:
+                MoveBodyX();
+                break;
+            case MoveMode.BodyVertical:
+                MoveBodyY();
+                break;
+            case MoveMode.TransformDiagonal:
+                MoveTransformXY();
+                break;
+            case MoveMode.TransformHorizontal:
+                break;
+            case MoveMode.TransformVertical:
+                break;
+            default:
+                break;
         }
     }
     private void MoveXY()
@@ -152,6 +159,7 @@ public class MoveToTargetState : IStates
             int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
             int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
             activeBody.velocity = new Vector2(moveToSpeed * fliped, moveToSpeed * upDown);
+            Debug.Log(new Vector2(moveToSpeed * fliped, moveToSpeed * upDown));
 
             //Input.GetAxis("Horizontal") * moveAxisSpeed
         }
@@ -192,6 +200,23 @@ public class MoveToTargetState : IStates
         {
             int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
             activeBody.velocity = new Vector2(activeBody.velocity.x, moveToSpeed * upDown);
+        }
+    }
+    // Transform
+    private void MoveTransformXY()
+    {
+        if (Vector2.Distance(active.transform.position, moveToTarget.transform.position) <= moveToMinRange || Vector2.Distance(active.transform.position, moveToTarget.transform.position) >= moveToMaxRange)
+        {
+            moveToDone = true;
+        }
+        else
+        {
+            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
+            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
+            activeBody.transform.position = new Vector2(active.transform.position.x + (moveToSpeed * fliped), active.transform.position.y + (moveToSpeed * upDown));
+            Debug.Log(new Vector2(moveToSpeed * fliped, moveToSpeed * upDown));
+
+            //Input.GetAxis("Horizontal") * moveAxisSpeed
         }
     }
 }

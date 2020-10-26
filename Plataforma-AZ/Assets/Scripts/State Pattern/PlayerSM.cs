@@ -99,7 +99,7 @@ public class PlayerSM : MonoBehaviour, ICombat
         playerHP = playerMaxHP;
         TriggerMove();
         healthBar.SetMaxFill(playerMaxHP);
-        textmeshPro.text = $"{textmeshPro.text} \n Versão:{Application.version} \n Data: 24/10/2020";
+        textmeshPro.text = $"{textmeshPro.text} \n Versão:{Application.version}";
     }
     void Update()
     {

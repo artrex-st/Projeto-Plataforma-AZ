@@ -6,7 +6,7 @@ public class FloatPlataform : MonoBehaviour
 {
     public StateMachine stateMachine = new StateMachine();
     public GameObject active;
-    public enum MoveMode { Diagonal, Horizontal, Vertical}
+    //public enum MoveMode { Diagonal, Horizontal, Vertical}
     public MoveMode moveMode = MoveMode.Diagonal;
     [Header("Patrol")]
     public Transform moveToTarget;
@@ -16,12 +16,9 @@ public class FloatPlataform : MonoBehaviour
     public List<Transform> moveToPoints;
     public int moveToIndex;
     public float moveDelay;
-    private int moveModeIndex;
-
 
     void Start()
     {
-        ChoseMove();
         TriggerMoveTo();
     }
 
@@ -33,7 +30,7 @@ public class FloatPlataform : MonoBehaviour
     #region trigger
     private void TriggerMoveTo()
     {
-        stateMachine.ChangeState(new MoveToTargetState(active, moveToSpeed, moveToMinRange, moveToMaxRange, moveToPoints, moveToIndex, MoveToDone, moveModeIndex));
+        stateMachine.ChangeState(new MoveToTargetState(active, moveToSpeed, moveToMinRange, moveToMaxRange, moveToPoints, moveToIndex, MoveToDone, moveMode));
     }
     #endregion
 
@@ -54,37 +51,19 @@ public class FloatPlataform : MonoBehaviour
         yield return new WaitForSeconds(cdTimer);
         TriggerMoveTo();
     }
-
-    private void ChoseMove()
-    {
-        switch (moveMode)
-        {
-            case MoveMode.Diagonal:
-                moveModeIndex = 0;
-                break;
-            case MoveMode.Horizontal:
-                moveModeIndex = 1;
-                break;
-            case MoveMode.Vertical:
-                moveModeIndex = 2;
-                break;
-            default:
-                break;
-        }
-    }
     //
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.SetParent(transform);
+            //collision.transform.SetParent(transform);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.SetParent(null);
+            //collision.transform.SetParent(null);
         }
     }
 }

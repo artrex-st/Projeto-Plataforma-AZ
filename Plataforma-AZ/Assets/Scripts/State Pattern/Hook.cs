@@ -5,11 +5,13 @@ using UnityEngine;
 public class Hook : MonoBehaviour
 {
     public StateMachine stateMachine = new StateMachine();
+    [Header("Enemy")]
     public GameObject active;
+    [Header("Scan")]
     public float scanRange;
     public LayerMask targetLayer;
     public string tagTarget;
-    [Header("Patrol")]
+    [Header("Move To")]
     public Transform moveToTarget;
     public float moveToSpeed;
     public float moveToMinRange;
@@ -21,7 +23,8 @@ public class Hook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TriggerCircleScan();
+        //TriggerCircleScan();
+        TriggerMoveTo();
     }
 
     // Update is called once per frame
@@ -33,7 +36,7 @@ public class Hook : MonoBehaviour
     #region StatesTriggers
     public void TriggerMoveTo()
     {
-        stateMachine.ChangeState(new MoveToTargetState(active,moveToSpeed,moveToMinRange,moveToMaxRange,moveToPoints,moveToIndex,MoveToDone));
+        stateMachine.ChangeState(new MoveToTargetState(active,moveToSpeed,moveToMinRange,moveToMaxRange,moveToPoints,moveToIndex, MoveToDone));
     }
     private void TriggerCircleScan()
     {
@@ -43,28 +46,38 @@ public class Hook : MonoBehaviour
     public void ScanFound(ScanCircleResults scanResults)
     {
         var scanItens = scanResults.allCollScanTag;
-        if (scanItens.Count >=1)
+        if (scanItens[0].transform.CompareTag("Player"))
         {
+            Debug.Log("é player");
             moveToTarget = scanItens[0].transform;
             TriggerMoveTo();
         }
     }
     public void MoveToDone(MoveToResults moveToResult)
     {
-        Debug.Log($"Patrol: {moveToIndex} e {moveToResult.activeMoveToPoint}");
         if (moveToIndex != moveToResult.activeMoveToPoint && moveToResult.patrolDone)
         {
             moveToIndex = moveToResult.activeMoveToPoint;
-            StartCoroutine(CdTimerStartScan(cdPatrolTimer));
+            StartCoroutine(CdTimerNewPoint(cdPatrolTimer));
         }
     }
+    public IEnumerator CdTimerNewPoint(float cdTimer)
+    {
+        if (moveToIndex >= moveToPoints.Count)
+        {
+            moveToIndex = 0;
+        }
+        yield return new WaitForSeconds(cdTimer);
+        TriggerMoveTo();
+    }
+    #region Function
     public IEnumerator CdTimerStartScan(float cdTimer)
     {
         Debug.Log("Esperando para voltar a scanear");
         yield return new WaitForSeconds(cdTimer);
         TriggerCircleScan();
     }
-
+    #endregion
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
