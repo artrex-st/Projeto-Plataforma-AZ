@@ -6683,16 +6683,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3161530993695728593, guid: df6783ffe0f02484e81ef068909fc72a,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnCloudStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 3161530994921504189, guid: df6783ffe0f02484e81ef068909fc72a,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnCloudEnd
-      objectReference: {fileID: 0}
     - target: {fileID: 3161530994927235877, guid: df6783ffe0f02484e81ef068909fc72a,
         type: 3}
       propertyPath: m_Name

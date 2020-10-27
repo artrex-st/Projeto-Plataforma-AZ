@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3161530993695728592}
   m_Layer: 0
-  m_Name: SpawnCloundStart
+  m_Name: SpawnCloudStart
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3161530994921504188}
   m_Layer: 0
-  m_Name: SpawnCloundEnd
+  m_Name: SpawnCloudEnd
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3161530994927235879}
   - component: {fileID: 3161530994927235876}
   m_Layer: 0
-  m_Name: Clound_Maker
+  m_Name: Cloud_Maker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,20 +105,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05e026f9d70baf46bfa10fa71b95a99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloundStartSpawn: {fileID: 3161530993695728592}
-  cloundEndSpawn: {fileID: 3161530994921504188}
+  cloudStartSpawn: {fileID: 3161530993695728592}
+  cloudEndSpawn: {fileID: 3161530994921504188}
   timeSpawnCD: 20
   rangeSpawn: 15
-  cloundMinSpeed: 0
-  cloundMaxSpeed: 5
-  maxCloundCreated: 50
-  cloundPreFab: {fileID: 7561415320409651584, guid: 0fa8f5cc66eeb2141a19a741b6edfbf1,
+  cloudMinSpeed: 1
+  cloudMaxSpeed: 3
+  maxCloudCreated: 10
+  cloudPreFab: {fileID: 7561415320409651584, guid: 0fa8f5cc66eeb2141a19a741b6edfbf1,
     type: 3}
-  cloundSprite:
+  cloudSprite:
   - {fileID: 21300000, guid: fee4ef1948ba7fd4489300173412e9e7, type: 3}
   - {fileID: 21300000, guid: 727d10bd139d7364db4ca310c98b3524, type: 3}
   - {fileID: 21300000, guid: 3214457250b3b694984579087e62ee0a, type: 3}
   - {fileID: 21300000, guid: 149b5dccb2fde7341839d0e89367c219, type: 3}
   - {fileID: 21300000, guid: ee3e8521ae2ad034f87e2766881abc0b, type: 3}
-  cloundInstance: []
-  cloundCD: 0
+  cloudInstance: []
+  cloudCD: 0
