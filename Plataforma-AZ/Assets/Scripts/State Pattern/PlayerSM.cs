@@ -30,7 +30,7 @@ public class PlayerSM : MonoBehaviour, ICombat
     public bool onStun;
     public bool onGroundSlide;
     public bool onHurt; //
-    
+
     [Header("Move")]
     public float moveSpeed;
     public float inputX;
@@ -127,7 +127,7 @@ public class PlayerSM : MonoBehaviour, ICombat
             }
             moveSM.ExecuteActiveState();
         }
-        else if (isGround && !onStun)
+        else if (isGround && !onStun || playerBody.velocity.y < -5)
         {
             canMove = true;
         }
@@ -231,6 +231,16 @@ public class PlayerSM : MonoBehaviour, ICombat
     {
         playerKeys -= keyValue;
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("CenarioMove") && playerBody.velocity == Vector2.zero)
+        {
+            transform.parent = collision.transform;
+        }
+        else
+            transform.parent = null;
+    }
+
     #endregion
     private void OnDrawGizmos()
     {

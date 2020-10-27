@@ -8,6 +8,7 @@ TagManager:
   - AttackPoint
   - Enemy
   - Enemy_Cenario
+  - CenarioMove
   layers:
   - Default
   - TransparentFX

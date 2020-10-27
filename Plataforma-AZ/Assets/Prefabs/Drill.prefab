@@ -230,6 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: {fileID: 1864997182727579168}
+  activeMove: 0
+  moveMode: 2
   moveToTarget: {fileID: 0}
   moveToSpeed: 5
   moveToMinRange: 1

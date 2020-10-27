@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum MoveMode { Diagonal, Horizontal, Vertical, BodyDiagonal, BodyHorizontal, BodyVertical, TransformDiagonal, TransformHorizontal, TransformVertical };
+public enum MoveMode { Diagonal, Horizontal, Vertical, BodyDiagonal, BodyHorizontal, BodyVertical};
 
 public class MoveToTargetState : IStates
 {
@@ -103,13 +103,6 @@ public class MoveToTargetState : IStates
             case MoveMode.BodyVertical:
                 MoveBodyY();
                 break;
-            case MoveMode.TransformDiagonal:
-                MoveTransformXY();
-                break;
-            case MoveMode.TransformHorizontal:
-                break;
-            case MoveMode.TransformVertical:
-                break;
             default:
                 break;
         }
@@ -118,15 +111,6 @@ public class MoveToTargetState : IStates
     {
         if (Vector2.Distance(active.transform.position,moveToTarget.transform.position) <= moveToMinRange || Vector2.Distance(active.transform.position, moveToTarget.transform.position) >= moveToMaxRange)
         {
-            moveToDone = true;
-        }else
-            active.transform.position = Vector2.MoveTowards(active.transform.position, moveToTarget.position, moveToSpeed * Time.deltaTime);
-    }
-    private void MoveX()
-    {
-        if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
-        {
-            moveToDone = true;
             // testes
             //Debug.Log("Fim da patrulha");
             //if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
@@ -134,6 +118,16 @@ public class MoveToTargetState : IStates
             //    Debug.Log("Fora de alcance.");
             //}else
             //    Debug.Log("Dentro do alcance.");
+            moveToDone = true;
+        }
+        else
+            active.transform.position = Vector2.MoveTowards(active.transform.position, moveToTarget.position, moveToSpeed * Time.deltaTime);
+    }
+    private void MoveX()
+    {
+        if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
+        {
+            moveToDone = true;
         }
         else
             active.transform.position = Vector2.MoveTowards(active.transform.position, new Vector2(moveToTarget.transform.position.x, active.transform.position.y), moveToSpeed * Time.deltaTime);
@@ -153,15 +147,13 @@ public class MoveToTargetState : IStates
         if (Vector2.Distance(active.transform.position, moveToTarget.transform.position) <= moveToMinRange || Vector2.Distance(active.transform.position, moveToTarget.transform.position) >= moveToMaxRange)
         {
             moveToDone = true;
+            activeBody.velocity = Vector2.zero;
         }
         else
         {
-            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
-            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
-            activeBody.velocity = new Vector2(moveToSpeed * fliped, moveToSpeed * upDown);
-            Debug.Log(new Vector2(moveToSpeed * fliped, moveToSpeed * upDown));
-
-            //Input.GetAxis("Horizontal") * moveAxisSpeed
+            float speedX = active.transform.position.x >= moveToTarget.transform.position.x ? -moveToSpeed : moveToSpeed;
+            float speedY = active.transform.position.y >= moveToTarget.transform.position.y ? -moveToSpeed : moveToSpeed;
+            activeBody.velocity = new Vector2(speedX, speedY);
         }
     } 
     private void MoveBodyX()
@@ -169,18 +161,12 @@ public class MoveToTargetState : IStates
         if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
         {
             moveToDone = true;
-            // testes
-            //Debug.Log("Fim da patrulha");
-            //if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
-            //{
-            //    Debug.Log("Fora de alcance.");
-            //}else
-            //    Debug.Log("Dentro do alcance.");
+            activeBody.velocity = Vector2.zero;
         }
         else
         {
-            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
-            activeBody.velocity = new Vector2(moveToSpeed * fliped, activeBody.velocity.y);
+            float speedX = active.transform.position.x >= moveToTarget.transform.position.x ? -moveToSpeed : moveToSpeed;
+            activeBody.velocity = new Vector2(speedX, activeBody.velocity.y);
         }
     }
     private void MoveBodyY()
@@ -188,35 +174,12 @@ public class MoveToTargetState : IStates
         if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) <= moveToMinRange || Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
         {
             moveToDone = true;
-            // testes
-            //Debug.Log("Fim da patrulha");
-            //if (Mathf.Abs(active.transform.position.x - moveToTarget.position.x) >= moveToMaxRange)
-            //{
-            //    Debug.Log("Fora de alcance.");
-            //}else
-            //    Debug.Log("Dentro do alcance.");
+            activeBody.velocity = Vector2.zero;
         }
         else
         {
-            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
-            activeBody.velocity = new Vector2(activeBody.velocity.x, moveToSpeed * upDown);
-        }
-    }
-    // Transform
-    private void MoveTransformXY()
-    {
-        if (Vector2.Distance(active.transform.position, moveToTarget.transform.position) <= moveToMinRange || Vector2.Distance(active.transform.position, moveToTarget.transform.position) >= moveToMaxRange)
-        {
-            moveToDone = true;
-        }
-        else
-        {
-            int fliped = active.transform.position.x >= moveToTarget.transform.position.x ? -1 : 1;
-            int upDown = active.transform.position.y >= moveToTarget.transform.position.y ? -1 : 1;
-            activeBody.transform.position = new Vector2(active.transform.position.x + (moveToSpeed * fliped), active.transform.position.y + (moveToSpeed * upDown));
-            Debug.Log(new Vector2(moveToSpeed * fliped, moveToSpeed * upDown));
-
-            //Input.GetAxis("Horizontal") * moveAxisSpeed
+            float speedY = active.transform.position.y >= moveToTarget.transform.position.y ? -moveToSpeed : moveToSpeed;
+            activeBody.velocity = new Vector2(activeBody.velocity.x, speedY);
         }
     }
 }
