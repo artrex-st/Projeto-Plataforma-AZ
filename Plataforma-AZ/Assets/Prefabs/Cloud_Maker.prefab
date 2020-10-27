@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudStartSpawn: {fileID: 3161530993695728592}
   cloudEndSpawn: {fileID: 3161530994921504188}
-  timeSpawnCD: 20
+  timeSpawnCD: 10
   rangeSpawn: 15
   cloudMinSpeed: 1
   cloudMaxSpeed: 3
